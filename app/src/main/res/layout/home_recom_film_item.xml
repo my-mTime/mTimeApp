@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="10dp">
+
+    <ImageView
+        android:id="@+id/iv_homerecit_pic"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_default" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/iv_homerecit_pic"
+        android:layout_alignTop="@id/iv_homerecit_pic">
+
+        <TextView
+            android:id="@+id/tv_homerecit_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#4ea2ff"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="2dp"
+            android:text="3D"
+            android:textColor="#ffffff"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_homerecit_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_homerecit_pic"
+        android:layout_alignRight="@id/iv_homerecit_pic"
+        android:background="#659d0e"
+        android:padding="3dp"
+        android:text="6.7"
+        android:textColor="#ffffff"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/tv_homerecit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/iv_homerecit_pic"
+        android:layout_alignRight="@id/iv_homerecit_pic"
+        android:layout_below="@id/iv_homerecit_pic"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="伦敦陷落"
+        android:textSize="11sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_homerecit_name"
+        android:layout_alignRight="@id/tv_homerecit_name"
+        android:layout_below="@id/tv_homerecit_name"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:id="@+id/btn_homerecit_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ticket_bg_shape"
+            android:paddingBottom="3dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="3dp"
+            android:text="购票"
+            android:textColor="#ffffff"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

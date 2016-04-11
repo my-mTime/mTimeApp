@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rg_shopinfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#ffffff"
+    android:padding="10dp">
+
+    <RadioButton
+        android:id="@+id/rb_cart"
+        android:drawableTop="@drawable/act_my_home_cart"
+        android:text="购物车"
+        style="@style/UserBtnTheme"
+        />
+    <RadioButton
+        android:id="@+id/rb_ticket"
+        android:drawableTop="@drawable/act_my_home_tickets"
+        android:text="购物车"
+        style="@style/UserBtnTheme"
+        />
+    <RadioButton
+        android:id="@+id/rb_goods"
+        android:drawableTop="@drawable/act_my_home_goods"
+        android:text="购物车"
+        style="@style/UserBtnTheme"
+        />
+    <RadioButton
+        android:id="@+id/rb_card"
+        android:drawableTop="@drawable/act_my_home_card"
+        android:text="购物车"
+        style="@style/UserBtnTheme"
+        />
+</RadioGroup>

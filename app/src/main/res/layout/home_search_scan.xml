@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_hosearch"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+
+    <EditText
+        android:id="@+id/et_hosearch_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/search_bg_shape"
+        android:drawableLeft="@drawable/title_bar_search_zoomin"
+        android:drawablePadding="5dp"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:hint="影片/影人/影院 任你搜"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="#55000000"
+        android:textSize="14sp"></EditText>
+
+    <ImageButton
+        android:id="@+id/iv_hosearch_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/home_scan"></ImageButton>
+</RelativeLayout>

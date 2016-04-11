@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_vertical.xml",
+        "source": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_vertical.xml"
+    },
+    {
+        "merged": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\pulltorefresh_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
+        "source": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\pulltorefresh_library\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_horizontal.xml"
+    }
+]

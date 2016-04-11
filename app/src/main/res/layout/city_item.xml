@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_city_index"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:text="A"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="#99000000"
+        android:background="#EBEBEB"
+        android:paddingLeft="10dp"
+        />
+    <com.atguigu.mtimeapp.view.MyGrideView
+        android:id="@+id/gv_city_countent"
+        android:padding="15dp"
+        android:fadingEdge="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnWidth="50dp"
+        android:verticalSpacing="15dp"
+        android:numColumns="4"
+        android:layout_marginTop="15dp"/>
+
+</LinearLayout>

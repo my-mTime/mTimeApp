@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/tital_serch"/>
+
+    <LinearLayout
+        android:id="@+id/ll_input_cityname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#D4D4D4"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:focusableInTouchMode="false"
+            android:id="@+id/et_tatil_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/title_bar_search_zoomin"
+            android:hint="输入城市名"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:cursorVisible="true"
+            android:singleLine="true"
+            android:textCursorDrawable="@drawable/test_cursor"
+            android:background="@drawable/city_search_region_background" />
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#696969"
+            android:text="取消"
+            android:layout_gravity="center_vertical"
+            android:textSize="21dp"
+            android:clickable="true"
+            android:layout_marginRight="5dp"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_city_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="10dp"
+        android:divider="@null" />
+
+</LinearLayout>

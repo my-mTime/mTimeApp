@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_user_top"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:padding="20dp"
+    android:background="@drawable/actor_detail_top_background">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/mine_main_logout_head"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_user_login"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="#ffffff"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:clickable="true"
+        android:background="@drawable/bt_solid_orange_66" />
+
+    <TextView
+        android:id="@+id/tv_user_reg"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="#ffffff"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/bt_line_w160_h66"/>
+
+</LinearLayout>

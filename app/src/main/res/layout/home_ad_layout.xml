@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:button_array="http://schemas.android.com/apk/res-auto"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:soundEffectsEnabled="false"
+        >
+    </android.support.v4.view.ViewPager>
+    <!--<com.mtime.mtmovie.widgets.ButtonArrayInLine-->
+        <!--android:layout_width="wr"-->
+        <!--android:layout_height="-2"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--button_array:button_count="3"-->
+        <!--button_array:button_selected_index="1"-->
+        <!-->-->
+    <!--</com.mtime.mtmovie.widgets.ButtonArrayInLine>-->
+</RelativeLayout>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\adt-bundle-windows-x64\workspace\studio\project\MtimeApp\MtimeApp\SMSSDK\src\main\jniLibs"/></dataSet><dataSet config="release"><source path="D:\adt-bundle-windows-x64\workspace\studio\project\MtimeApp\MtimeApp\SMSSDK\src\release\jniLibs"/></dataSet></merger>

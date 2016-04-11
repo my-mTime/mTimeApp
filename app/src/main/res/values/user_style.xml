@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextBtnTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@drawable/background_selector</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawableRight">@drawable/profile_right_arrow</item>
+    </style>
+</resources>

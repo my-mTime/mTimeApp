@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/tv_hopointfilmre_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#659d0e"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="3dp"
+        android:text="影评"
+        android:textColor="#ffffff"
+        android:textSize="11sp"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_hopointfilmre_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:lineSpacingMultiplier="1.1"
+                android:maxLines="2"
+                android:text="《凯撒万岁》2016"
+                android:textColor="#000000"
+                android:textSize="16sp"></TextView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_hopointfilmre_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/icon_comma_gray_new" />
+
+
+                <TextView
+                    android:id="@+id/tv_hopointfilmre_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:lineSpacingMultiplier="1.2"
+                    android:maxLines="3"
+                    android:text="    绑架不可怕，洗脑才可怕，戏里戏外，万千星辉，演绎好莱坞黄金时代"
+                    android:textColor="#aa000000"
+                    android:textSize="14sp"></TextView>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/profile_default_head_h90" />
+
+                <TextView
+                    android:id="@+id/tv_hopointfilmre_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lineSpacingMultiplier="1.2"
+                    android:maxLines="2"
+                    android:text="逍遥侠客121-评 《伦敦陷落》"
+                    android:textColor="#88000000"
+                    android:textSize="12sp"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/iv_hopointfilmre_pic"
+                android:layout_width="80dp"
+                android:layout_height="120dp"
+                android:background="#ffffff"
+                android:cropToPadding="true"
+                android:padding="1dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_default"></ImageView>
+
+            <TextView
+                android:id="@+id/tv_hopointfilmre_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="4dp"
+                android:background="#659d0e"
+                android:padding="4dp"
+                android:text="7.2"
+                android:textColor="#ffffff"
+                android:textSize="11sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#22000000"></View>
+</LinearLayout>

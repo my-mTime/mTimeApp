@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/tv_hopointheadli_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4c9eff"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="3dp"
+        android:text="头条"
+        android:textColor="#ffffff"
+        android:textSize="11sp"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_hopointli_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_hopointheadli_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="middle"
+                    android:lineSpacingMultiplier="1.1"
+                    android:maxLines="2"
+                    android:text="17处沙漠宝藏，你找到几个？"
+                    android:textColor="#000000"
+                    android:textSize="16sp"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_hopointheadli_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:lineSpacingMultiplier="1.2"
+                    android:maxLines="2"
+                    android:text="陈坤拒绝出演 抢银行变抢理财公司"
+                    android:textColor="#aa000000"
+                    android:textSize="12sp"></TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_hopointheadli_pic"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_default_300x200" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_hopointheadli_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6小时前"
+            android:textColor="#55000000"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_hopointheadli_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="评论6"
+            android:textColor="#55000000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB">
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机号"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/reg_phonenum"
+                android:layout_marginLeft="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入手机号码"/>
+
+            <ImageView
+                android:id="@+id/iv_clear_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/login_input_cancel_icon"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#66000000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密　码"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/reg_password"
+                android:layout_marginLeft="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="6-20位字母、数字"
+                android:password="true"
+                android:background="@null"/>
+
+            <CheckBox
+                android:id="@+id/cb_check_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:background="@drawable/password_display_selector"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#66000000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="验证码"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/reg_captcha"
+                android:layout_weight="1"
+                android:layout_marginLeft="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:password="true"
+                android:background="@null"/>
+
+            <TextView
+                android:onClick="obtainCaptcha"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="获取验证码"
+                android:textSize="18sp"
+                android:textColor="#0075C4"
+                android:background="@drawable/bind_register_login_background" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#66000000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="性　别"
+                android:textSize="18sp"/>
+
+            <RadioGroup
+                android:id="@+id/reg_gender"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:text="男"
+                    android:textSize="18sp"
+                    android:textColor="@drawable/rb_malecolor_selector"
+                    android:button="@null"
+                    android:drawableRight="@drawable/reg_male_selector"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:text="女"
+                    android:textSize="18sp"
+                    android:textColor="@drawable/rb_malecolor_selector"
+                    android:button="@null"
+                    android:drawableRight="@drawable/reg_female_selector"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选填"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/reg_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:background="@drawable/cb_agree_selector"/>
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我已阅读并同意"/>
+
+        <TextView
+            android:id="@+id/tv_reg_clause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《Mtime时光网服务条款》"
+            android:textColor="#3DB1DC"/>
+    </LinearLayout>
+
+    <Button
+        android:onClick="commit"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="注册"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:background="@drawable/login_login_btn_icon"/>
+
+</LinearLayout>

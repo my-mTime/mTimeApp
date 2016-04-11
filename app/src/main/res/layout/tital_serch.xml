@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg_blue">
+
+        <TextView
+            android:id="@+id/tv_choice_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择城市"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/lead_bg_logo"
+            android:background="@android:color/transparent"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_top_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/find_news_img_detail_top_left_arrow"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+
+
+        <ImageView
+            android:id="@+id/iv_top_share"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/title_bar_share"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_top_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/title_bar_favorite"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/iv_top_share"
+            android:layout_marginRight="30dp"
+            android:visibility="gone"/>
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
