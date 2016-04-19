@@ -3,7 +3,11 @@ package com.atguigu.mtimeapp.daiwei;
 import android.app.Activity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.atguigu.mtimeapp.R;
 import com.atguigu.mtimeapp.daiwei.domain.DiscoverHeaderEntity;
@@ -25,6 +29,14 @@ public abstract class DiscoverBasepage {
     public final View childView;
     private DiscoverHeaderEntity headerEntity;
     public ListView lv_discover;
+    private TextView tv_disconver_header_title;
+    private ImageView iv_header_bg;
+    private TextView tv_disconver_header_name;
+    private TextView tv_header_news_old;
+    private ImageView ib_header_prevue_play;
+    private ImageView iv_header_filmComment_icon;
+    private LinearLayout ll_header_news_ticketList;
+    private RadioGroup rg_header_leaderboard_topList;
 
     public DiscoverBasepage(Activity activity) {
         this.mActivity = activity;
@@ -38,6 +50,16 @@ public abstract class DiscoverBasepage {
         lv_discover = (ListView) View.inflate(mActivity, R.layout.discover, null);
         View header = View.inflate(mActivity, R.layout.discover_header, null);
         lv_discover.addHeaderView(header);
+
+        tv_disconver_header_title = (TextView) header.findViewById(R.id.tv_disconver_header_title);
+        iv_header_bg = (ImageView) header.findViewById(R.id.iv_header_bg);
+        iv_header_filmComment_icon = (ImageView) header.findViewById(R.id.iv_header_filmComment_icon);
+        tv_disconver_header_name = (TextView) header.findViewById(R.id.tv_disconver_header_name);
+        tv_header_news_old = (TextView) header.findViewById(R.id.tv_header_news_old);
+
+        ll_header_news_ticketList = (LinearLayout) header.findViewById(R.id.ll_header_news_ticketList);
+        rg_header_leaderboard_topList = (RadioGroup) header.findViewById(R.id.rg_header_leaderboard_topList);
+        ib_header_prevue_play = (ImageView) header.findViewById(R.id.ib_header_prevue_play);
     }
 
     public abstract View initView();

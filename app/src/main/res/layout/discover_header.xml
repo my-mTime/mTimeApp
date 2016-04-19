@@ -61,7 +61,8 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="15dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/img_default" />
+            android:src="@drawable/img_default"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/tv_header_news_old"
@@ -77,12 +78,12 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:visibility="gone"
         android:id="@+id/ll_header_news_ticketList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/rl_discover_header"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="wrap_content"
