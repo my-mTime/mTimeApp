@@ -4,6 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <include
+        android:id="@+id/loading"
+        layout="@layout/uiutil_loading_dialog" />
+
+    <include layout="@layout/loading_failed_layout"
+        android:id="@+id/loading_failed"/>
+
     <com.handmark.pulltorefresh.library.PullToRefreshListView
         android:id="@+id/lv_homehead"
         android:layout_width="match_parent"
@@ -15,7 +22,7 @@
         android:fastScrollEnabled="false"
         android:footerDividersEnabled="false"
         android:headerDividersEnabled="false"
-        android:smoothScrollbar="true"
-        android:paddingBottom="10dp"></com.handmark.pulltorefresh.library.PullToRefreshListView>
+        android:paddingBottom="10dp"
+        android:smoothScrollbar="true"/>
 
 </LinearLayout>

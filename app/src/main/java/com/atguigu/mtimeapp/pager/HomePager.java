@@ -1,9 +1,11 @@
 package com.atguigu.mtimeapp.pager;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -21,10 +23,14 @@ import com.atguigu.mtimeapp.base.BasePager;
 import com.atguigu.mtimeapp.domain.HomeBean;
 import com.atguigu.mtimeapp.domain.HomeRecomFilmBean;
 import com.atguigu.mtimeapp.domain.HomeTimeBean;
+import com.atguigu.mtimeapp.lixin.GlobalTopActivity;
+import com.atguigu.mtimeapp.lixin.MTimeHotActivity;
 import com.atguigu.mtimeapp.utils.ContantsUtils;
+import com.atguigu.mtimeapp.utils.ToWebUtils;
 import com.example.benhuo_library.lib.utils.image.image.ImageUtils;
 import com.example.benhuo_library.lib.utils.image.utils.DensityUtils;
 import com.google.gson.Gson;
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
@@ -102,6 +108,9 @@ public class HomePager extends BasePager {
     private TextView tvHomerecitName;
     private Button btnHomerecitBuy;
 
+    private LinearLayout loading;
+    private LinearLayout loading_failed;
+
     private View headView;
     /**
      * 推荐的电影的数据
@@ -123,6 +132,10 @@ public class HomePager extends BasePager {
      * 时光精选数据
      */
     private List<HomeTimeBean.DataEntity> data;
+    /**
+     * 时光精选的Adapter
+     */
+    private HomePagerAdapter homePagerAdapter;
 
     public HomePager(Activity activity) {
         super(activity);
@@ -133,12 +146,17 @@ public class HomePager extends BasePager {
         headView = View.inflate(mActivity, R.layout.home_head_view, null);
         View view = View.inflate(mActivity, R.layout.home_pager_list, null);
 
+        loading = (LinearLayout) view.findViewById(R.id.loading);
+        loading_failed = (LinearLayout) view.findViewById(R.id.loading_failed);
+
         initHeadView();
 
         lvHomehead = (PullToRefreshListView) view.findViewById(R.id.lv_homehead);
 
         return view;
     }
+
+    private boolean hasAddHeadView = false;
 
     @Override
     public void initData() {
@@ -160,13 +178,16 @@ public class HomePager extends BasePager {
                 areaSecond = homeBean.getAreaSecond();
 
                 //顶部广告轮播条
-                addAdTop();
+                addAdTop(topPosters);
 
                 //中间的广告轮播条
-                addCenterAd();
+                addCenterAd(advList);
 
                 //电影商城
-                addFilmECshop();
+                addFilmECshop(areaSecond);
+
+                //时光精选
+                getTimeListData();
             }
 
             @Override
@@ -181,30 +202,94 @@ public class HomePager extends BasePager {
             }
         });
 
-        ListView refreshableView = lvHomehead.getRefreshableView();
-        refreshableView.addHeaderView(headView);//添加头布局
+        /**
+         * 设置entry的监听
+         */
+        setEntryListener();
+
+    }
+
+    private void setEntryListener() {
+        llHoentry0.setOnClickListener(new MyOnClickListener(null));
+        llHoentry1.setOnClickListener(new MyOnClickListener(null));
+        llHoentry2.setOnClickListener(new MyOnClickListener(null));
+        llHoentry3.setOnClickListener(new MyOnClickListener(null));
+    }
+
+    private void getTimeListData() {
         //时光精选列表
-        OkHttpUtils.post().url(ContantsUtils.HOME_TIME_SELECTION).build().execute(new StringCallback() {
+        OkHttpUtils.get().url(ContantsUtils.HOME_TIME_SELECTION).build().execute(new StringCallback() {
             @Override
             public void onError(Request request, Exception e) {
-
+                loading.setVisibility(View.GONE);
+                loading_failed.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onResponse(String response) {
+                loading.setVisibility(View.GONE);
                 HomeTimeBean homeTimeBean = new Gson().fromJson(response, HomeTimeBean.class);
                 data = homeTimeBean.getData();
-                lvHomehead.setAdapter(new HomePagerAdapter(mActivity, data));
+                if (!hasAddHeadView) {
+                    ListView refreshableView = lvHomehead.getRefreshableView();
+                    refreshableView.addHeaderView(headView);//添加头布局
+                    hasAddHeadView = true;
+                }
+                lvHomehead.setMode(PullToRefreshBase.Mode.DISABLED);
+                homePagerAdapter = new HomePagerAdapter(mActivity, data);
+                lvHomehead.setAdapter(homePagerAdapter);
+//                lvHomehead.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
+//                    @Override
+//                    public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
+//
+//                    }
+//
+//                    @Override
+//                    public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
+//                        //加载更多
+//                        loadMorePager++;
+//                        LoadMore();
+//                    }
+//                });
+            }
+
+            @Override
+            public void onBefore(Request request) {
+                super.onBefore(request);
+                loading.setVisibility(View.VISIBLE);
             }
         });
+    }
 
+    private int loadMorePager = 1;
 
+    /**
+     * 加载更多
+     */
+    private void LoadMore() {
+        String loadMoreUrl = ContantsUtils.HOME_TIME_SELECTION + "?pageIndex="+loadMorePager;
+        OkHttpUtils.get().url(loadMoreUrl).build().execute(new StringCallback() {
+            @Override
+            public void onError(Request request, Exception e) {
+                lvHomehead.onRefreshComplete();
+            }
+
+            @Override
+            public void onResponse(String response) {
+                lvHomehead.onRefreshComplete();
+                HomeTimeBean homeTimeBean = new Gson().fromJson(response, HomeTimeBean.class);
+                List<HomeTimeBean.DataEntity> moreData = homeTimeBean.getData();
+                data.addAll(moreData);
+                homePagerAdapter.notifyDataSetChanged();
+            }
+        });
     }
 
     /**
      * 添加电影商城
+     * @param areaSecond
      */
-    private void addFilmECshop() {
+    private void addFilmECshop(HomeBean.AreaSecondEntity areaSecond) {
         HomeBean.AreaSecondEntity.SubFirstEntity subFirst = areaSecond.getSubFirst();
         HomeBean.AreaSecondEntity.SubSecondEntity subSecond = areaSecond.getSubSecond();
         HomeBean.AreaSecondEntity.SubFifthEntity subThird = areaSecond.getSubThird();
@@ -214,17 +299,17 @@ public class HomePager extends BasePager {
         tvHofilmsh0.setTextColor(Color.parseColor(subFirst.getTitleColor()));
         tvHofilmsh0.setText(subFirst.getTitle());
         tvHofilmsh01.setText(subFirst.getTitleSmall());
-        ImageUtils.loadImage(mActivity,subFirst.getImage2(),iv_hofilmsh_0,R.drawable.img_default_300x200);
+        ImageUtils.loadImage(mActivity, subFirst.getImage2(), iv_hofilmsh_0, R.drawable.img_default_300x200);
 
         tvHofilmsh1.setTextColor(Color.parseColor(subSecond.getTitleColor()));
         tvHofilmsh1.setText(subSecond.getTitle());
         tvHofilmsh11.setText(subSecond.getTitleSmall());
-        ImageUtils.loadImage(mActivity,subSecond.getImage2(),iv_hofilmsh_1,R.drawable.img_default_300x200);
+        ImageUtils.loadImage(mActivity, subSecond.getImage2(), iv_hofilmsh_1, R.drawable.img_default_300x200);
 
         tvHofilmsh2.setTextColor(Color.parseColor(subThird.getTitleColor()));
         tvHofilmsh2.setText(subThird.getTitle());
         tvHofilmsh21.setText(subThird.getTitleSmall());
-        ImageUtils.loadImage(mActivity,subThird.getImage2(),iv_hofilmsh_2,R.drawable.img_default_300x200);
+        ImageUtils.loadImage(mActivity, subThird.getImage2(), iv_hofilmsh_2, R.drawable.img_default_300x200);
 
 //        tvHofilmsh3.setTextColor(Color.parseColor(subFourth.getTitleColor()));
 //        tvHofilmsh3.setText(subFirst.getTitle());
@@ -234,39 +319,84 @@ public class HomePager extends BasePager {
         tvHofilmsh4.setTextColor(Color.parseColor(subFifth.getTitleColor()));
         tvHofilmsh4.setText(subFifth.getTitle());
         tvHofilmsh41.setText(subFifth.getTitleSmall());
-        ImageUtils.loadImage(mActivity,subFifth.getImage2(),iv_hofilmsh_4,R.drawable.img_default_300x200);
+        ImageUtils.loadImage(mActivity, subFifth.getImage2(), iv_hofilmsh_4, R.drawable.img_default_300x200);
 
 //        tvHofilmsh5.setTextColor(Color.parseColor(subFirst.getTitleColor()));
 //        tvHofilmsh5.setText(subFirst.getTitle());
 //        tvHofilmsh51.setText(subFifth.getTitleSmall());
 //        ImageUtils.loadImage(mActivity,subFirst.getImage2(),iv_hofilmsh_5,R.drawable.img_default_300x200);
+
+        iv_hofilmsh_0.setOnClickListener(new MyOnClickListener(subFirst.getGotoPage().getUrl()));
+        iv_hofilmsh_1.setOnClickListener(new MyOnClickListener(subFirst.getGotoPage().getUrl()));
+        iv_hofilmsh_2.setOnClickListener(new MyOnClickListener(subFirst.getGotoPage().getUrl()));
+        iv_hofilmsh_4.setOnClickListener(new MyOnClickListener(subFirst.getGotoPage().getUrl()));
     }
 
     /**
      * 添加中间的广告轮播条
+     * @param advList
      */
-    private void addCenterAd() {
-        setAutoAdParams(viewPager2);
+    private void addCenterAd(List<HomeBean.AdvListEntity> advList) {
+        addAdPoint(llHomeheadContainer2, advList.size());
+        setAutoAdParams(viewPager2, advList.size());
+//        setPointChanged(viewPager2,advList.size());
+        final int count= advList.size();
+        final int[] prePos = {0};
+        viewPager2.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                //把上一次设为默认
+                llHomeheadContainer2.getChildAt(prePos[0] % count).setSelected(false);
+                //当前设为红点
+                llHomeheadContainer2.getChildAt(position % count).setSelected(true);
+                //当前赋值给上次
+                prePos[0] = position;
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
         viewPager2.setAdapter(new MyCenterAdAdapter());
+        viewPager2.setCurrentItem((Integer.MAX_VALUE / 2 - Integer.MAX_VALUE / 2 % this.advList.size()));
+        viewPager2.startAutoScroll();
     }
 
     /**
      * 添加顶部广告轮播条
+     * @param topPosters
      */
-    private void addAdTop() {
+    private void addAdTop(List<HomeBean.TopPostersEntity> topPosters) {
 
-        setAutoAdParams(viewPager);
+        addAdPoint(llHomeheadContainer, topPosters.size());
+
+        setAutoAdParams(viewPager, topPosters.size());
+        setPointChanged(viewPager, topPosters.size());
 
         viewPager.setAdapter(new MyTopAdAdapter());
         //解决最后一个跳转到第一个闪动问题
         viewPager.setCurrentItem((Integer.MAX_VALUE / 2 - Integer.MAX_VALUE / 2 % topPosters.size()));
+        viewPager.startAutoScroll();//开始自动轮播
+    }
 
+    /**
+     * 添加小圆点
+     *
+     * @param llHomeheadContainer
+     */
+    private void addAdPoint(LinearLayout llHomeheadContainer, int count) {
         llHomeheadContainer.removeAllViews();
-        for (int i = 0; i < topPosters.size(); i++) {
+        for (int i = 0; i < count; i++) {
             ImageView point = new ImageView(mActivity);
             point.setImageResource(R.drawable.home_ad_point);
 
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(DensityUtils.dip2px(mActivity, 8), DensityUtils.dip2px(mActivity, 8));
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(DensityUtils.dip2px(mActivity, 15), DensityUtils.dip2px(mActivity, 15));
 
             if (i == 0) {
                 point.setSelected(true);
@@ -279,12 +409,9 @@ public class HomePager extends BasePager {
             //把点添加到线性布局中
             llHomeheadContainer.addView(point);
         }
-
     }
 
-    private int prePos = 0;
-
-    private void setAutoAdParams(AutoScrollViewPager viewPager) {
+    private void setAutoAdParams(AutoScrollViewPager viewPager, int count) {
         //设置延时时间
         viewPager.setInterval(2000);
         //设置轮播的方向 AutoScrollViewPager.RIGHT/AutoScrollViewPager.LEFT
@@ -306,20 +433,35 @@ public class HomePager extends BasePager {
         viewPager.setBorderAnimation(false);
         //当触摸的时候，停止轮播
         viewPager.setStopScrollWhenTouch(true);
+//        setPointChanged(viewPager, count);
+    }
+
+    private int prePos=0;
+
+    /**
+     * 改变小圆点的显示位置
+     *
+     * @param viewPager
+     * @param count
+     */
+    private void setPointChanged(final AutoScrollViewPager viewPager, final int count) {
+
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                //把上一次设为默认
-//                llHomeheadContainer.getChildAt(prePos).setSelected(false);
-//                //当前设为红点
-//                llHomeheadContainer.getChildAt(position).setSelected(true);
-//                //当前赋值给上次
-//                prePos = position;
+
             }
 
             @Override
             public void onPageSelected(int position) {
-
+                //把上一次设为默认
+                int i=prePos % count;
+                llHomeheadContainer.getChildAt(prePos % count).setSelected(false);
+                //当前设为红点
+                int j=position % count;
+                llHomeheadContainer.getChildAt(position % count).setSelected(true);
+                //当前赋值给上次
+                prePos = position;
             }
 
             @Override
@@ -333,7 +475,7 @@ public class HomePager extends BasePager {
 
         @Override
         public int getCount() {
-            return advList.size();
+            return Integer.MAX_VALUE;
         }
 
         @Override
@@ -344,9 +486,16 @@ public class HomePager extends BasePager {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             ImageView imageView = new ImageView(mActivity);
-            HomeBean.AdvListEntity advListEntity = advList.get(position);
+            HomeBean.AdvListEntity advListEntity = advList.get(position % advList.size());
+            final String webUrl=advListEntity.getUrl();
             ImageUtils.loadImage(mActivity, advListEntity.getImg(), imageView, R.drawable.img_default_300x200);
             container.addView(imageView);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ToWebUtils.startToWebPager(mActivity, webUrl);
+                }
+            });
             return imageView;
         }
 
@@ -372,8 +521,17 @@ public class HomePager extends BasePager {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             ImageView imageView = new ImageView(mActivity);
-            ImageUtils.loadImage(mActivity, topPosters.get(position % topPosters.size()).getImg(), imageView, R.drawable.img_default_300x200);
+            HomeBean.TopPostersEntity topPoster = topPosters.get(position % topPosters.size());
+            ImageUtils.loadImage(mActivity, topPoster.getImg(), imageView, R.drawable.img_default_300x200);
             container.addView(imageView);
+            final String webUrl=topPoster.getUrl();
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    ToWebUtils.startToWebPager(mActivity, webUrl);
+                }
+            });
             return imageView;
         }
 
@@ -382,6 +540,8 @@ public class HomePager extends BasePager {
             container.removeView((View) object);
         }
     }
+
+    private boolean hasSetRecomFilm = false;
 
     private void getRecomFilm() {
         /**
@@ -397,8 +557,11 @@ public class HomePager extends BasePager {
             public void onResponse(String response) {
                 HomeRecomFilmBean recomFilmBean = new Gson().fromJson(response, HomeRecomFilmBean.class);
                 recom_movies = recomFilmBean.getMovies();
-                //添加推荐的电影
-                addRecomFilm();
+                if (!hasSetRecomFilm) {
+                    hasSetRecomFilm = true;
+                    //添加推荐的电影
+                    addRecomFilm();
+                }
             }
         });
     }
@@ -439,11 +602,44 @@ public class HomePager extends BasePager {
                 }
             });
 
+            llHomerefilmContainer.setGravity(Gravity.CENTER);
             llHomerefilmContainer.addView(recomFilmVew);
         }
     }
 
+    class MyOnClickListener implements View.OnClickListener{
+
+        private String url;
+        public MyOnClickListener(String url) {
+            this.url=url;
+        }
+
+        @Override
+        public void onClick(View v) {
+            if(v==iv_hofilmsh_0) {
+                ToWebUtils.startToWebPager(mActivity, url);
+            }else if(v==iv_hofilmsh_1) {
+                ToWebUtils.startToWebPager(mActivity, url);
+            }else if(v==iv_hofilmsh_2){
+                ToWebUtils.startToWebPager(mActivity, url);
+            } else if(v==iv_hofilmsh_4){
+                ToWebUtils.startToWebPager(mActivity, url);
+            }else if(v==llHoentry0){
+                Intent intent = new Intent(mActivity, MTimeHotActivity.class);
+                mActivity.startActivity(intent);
+            } else if(v==llHoentry1){
+                Intent intent = new Intent(mActivity, GlobalTopActivity.class);
+                mActivity.startActivity(intent);
+            }else if(v==llHoentry2){
+
+            } else if(v==llHoentry3){
+
+            }
+        }
+    }
+
     private void initHeadView() {
+
         viewPager = (AutoScrollViewPager) headView.findViewById(R.id.view_pager);
         llHomeheadContainer = (LinearLayout) headView.findViewById(R.id.ll_homehead_container);
         viewPager2 = (AutoScrollViewPager) headView.findViewById(R.id.view_pager2);

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="90dp"
+    android:minWidth="90dp"
     android:layout_height="wrap_content"
     android:paddingRight="10dp">
 
@@ -32,6 +33,7 @@
     </LinearLayout>
 
     <TextView
+        android:layout_centerHorizontal="true"
         android:id="@+id/tv_homerecit_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,10 +47,11 @@
 
     <TextView
         android:id="@+id/tv_homerecit_name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/iv_homerecit_pic"
         android:layout_alignRight="@id/iv_homerecit_pic"
+        android:ellipsize="end"
         android:layout_below="@id/iv_homerecit_pic"
         android:layout_marginTop="5dp"
         android:gravity="center"
@@ -65,13 +68,13 @@
 
         <Button
             android:id="@+id/btn_homerecit_buy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/ticket_bg_shape"
-            android:paddingBottom="3dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
+            android:paddingBottom="3dp"
             android:paddingTop="3dp"
             android:text="购票"
             android:textColor="#ffffff"

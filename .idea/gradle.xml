@@ -13,8 +13,12 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/benhuo_library" />
             <option value="$PROJECT_DIR$/citylist_demo" />
+            <option value="$PROJECT_DIR$/etablistview_library" />
             <option value="$PROJECT_DIR$/okhttputils" />
             <option value="$PROJECT_DIR$/pulltorefresh_library" />
+            <option value="$PROJECT_DIR$/selectMovieSeatmaster" />
+            <option value="$PROJECT_DIR$/snappingstepper" />
+            <option value="$PROJECT_DIR$/snappingstepper_app" />
           </set>
         </option>
       </GradleProjectSettings>

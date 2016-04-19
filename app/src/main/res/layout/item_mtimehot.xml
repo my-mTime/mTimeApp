@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_mtimehot_icon"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/movie" />
+
+    <ImageView
+        android:id="@+id/iv_mtimehot_ranking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_mtimehot_icon"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/icon_no_first" />
+
+    <LinearLayout
+        android:id="@+id/ll_mtimehot_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/iv_mtimehot_icon"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_mtimehot_cname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="伦敦陷落"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_mtimehot_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:background="#659d0e"
+                android:padding="3dp"
+                android:text="7.7"
+                android:textColor="#ffffff"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_mtimehot_ename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="London Has Fallen"
+            android:textColor="#55000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_mtimehot_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="导演：巴巴克"
+            android:textColor="#77000000"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_mtimehot_actor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="主演："
+            android:textColor="#77000000"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_mtimehot_showtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今日157家影院上映2615场"
+            android:textColor="#77000000"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/iv_mtimehot_icon">
+
+        <TextView
+            android:id="@+id/tv_mtimehot_wantsee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="1841人想看"
+            android:textColor="#ff8600"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_mtimehot_buy"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_solid_orange_h80"
+            android:gravity="center"
+            android:text="购票"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+</RelativeLayout>

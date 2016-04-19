@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_text_mouthview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/moviecoming_item_text"
+            android:layout_width="fill_parent"
+            android:textSize="20sp"
+            android:text="1月"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#6e6e65"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingTop="10dp">
+        <TextView
+            android:id="@+id/movecoming_item_tv_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="14日"
+            android:textSize="12sp" />
+        <ImageView
+            android:layout_toRightOf="@+id/movecoming_item_tv_data"
+            android:id="@+id/movecoming_item_iv_icon"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/movie" />
+
+        <LinearLayout
+            android:id="@+id/ll_movecoming_listitem1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/movecoming_item_iv_icon"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="30dp">
+
+            <TextView
+                android:id="@+id/movecoming_item_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="星球大战，原理觉醒"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/movecoming_item_tv_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="有一种情怀叫星战"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/movecoming_item_tv_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="1月9日上映"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <Button
+                    android:id="@+id/movecoming_item_btn_prebuy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_solid_green_h58"
+                    android:text="超前预售"
+                    android:textSize="12sp"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/movecoming_item_btn_premovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/bt_line_green_66"
+                    android:text="预告片"
+                    android:textSize="12sp"
+                    android:textColor="#669e10" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#6e6e65"/>
+</LinearLayout>

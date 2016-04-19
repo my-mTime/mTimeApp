@@ -7,26 +7,26 @@
     android:background="#ffffff"
     android:padding="10dp">
 
-    <RadioButton
-        android:id="@+id/rb_cart"
+    <Button
+        android:id="@+id/btn_cart"
         android:drawableTop="@drawable/act_my_home_cart"
         android:text="购物车"
         style="@style/UserBtnTheme"
         />
-    <RadioButton
-        android:id="@+id/rb_ticket"
+    <Button
+        android:id="@+id/btn_ticket"
         android:drawableTop="@drawable/act_my_home_tickets"
         android:text="购物车"
         style="@style/UserBtnTheme"
         />
-    <RadioButton
-        android:id="@+id/rb_goods"
+    <Button
+        android:id="@+id/btn_goods"
         android:drawableTop="@drawable/act_my_home_goods"
         android:text="购物车"
         style="@style/UserBtnTheme"
         />
-    <RadioButton
-        android:id="@+id/rb_card"
+    <Button
+        android:id="@+id/btn_card"
         android:drawableTop="@drawable/act_my_home_card"
         android:text="购物车"
         style="@style/UserBtnTheme"

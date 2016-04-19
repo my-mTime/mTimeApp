@@ -1,13 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="50dp"
+    android:background="@android:color/holo_blue_dark"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/dialog_bg_blue">
+        android:layout_height="50dp">
+
+        <LinearLayout
+            android:id="@+id/ll_select_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_select_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中国"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/city_select_array" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_switch_moive_cinema"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/title_bar_movie_cinema_switch_view_background"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/rb_choice_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/title_bar_movie_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="电影"
+                android:textColor="@drawable/movie_cime_rg_text_selector"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/rb_choice_cinema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/title_bar_cinema_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="影院"
+                android:textColor="@drawable/movie_cime_rg_text_selector"
+                android:textSize="20sp" />
+        </RadioGroup>
+
+        <ImageButton
+            android:id="@+id/ib_search_film_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/title_search_icon"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/tv_choice_city"
@@ -15,50 +83,47 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="选择城市"
-            android:textSize="20sp"
             android:textColor="@android:color/white"
-            android:visibility="gone"/>
+            android:textSize="20sp"
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/iv_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:src="@drawable/lead_bg_logo"
             android:background="@android:color/transparent"
-            android:visibility="gone"/>
+            android:src="@drawable/lead_bg_logo"
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/iv_top_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/find_news_img_detail_top_left_arrow"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/find_news_img_detail_top_left_arrow" />
 
 
         <ImageView
             android:id="@+id/iv_top_share"
-            android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/title_bar_share"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
-            android:visibility="gone"/>
+            android:src="@drawable/title_bar_share"
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/iv_top_like"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/title_bar_favorite"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@id/iv_top_share"
             android:layout_marginRight="30dp"
-            android:visibility="gone"/>
-
-
-
+            android:layout_toLeftOf="@id/iv_top_share"
+            android:src="@drawable/title_bar_favorite"
+            android:visibility="gone" />
 
     </RelativeLayout>
 

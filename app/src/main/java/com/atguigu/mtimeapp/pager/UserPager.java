@@ -15,7 +15,7 @@ import com.atguigu.mtimeapp.base.BasePager;
 /**
  * Created by FlagWu on 2016/4/8.
  */
-public class UserPager extends BasePager{
+public class UserPager extends BasePager {
 
     private LinearLayout fl_user_top;
     private LinearLayout ll_tv_btn;

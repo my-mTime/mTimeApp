@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-en\\values-en.xml",
+        "outputFile": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-en\\values-en.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 972
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -33,7 +33,7 @@
                     "endOffset": 2051
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -54,7 +54,7 @@
                     "endOffset": 3230
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 37,
                         "startColumn": 4,
@@ -75,7 +75,7 @@
                     "endOffset": 3638
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 56,
                         "startColumn": 4,
@@ -96,7 +96,7 @@
                     "endOffset": 4046
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 63,
                         "startColumn": 4,
@@ -117,7 +117,7 @@
                     "endOffset": 4553
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 72,
                         "startColumn": 4,
@@ -138,7 +138,7 @@
                     "endOffset": 5499
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 80,
                         "startColumn": 4,
@@ -159,7 +159,7 @@
                     "endOffset": 5838
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 97,
                         "startColumn": 4,
@@ -180,7 +180,7 @@
                     "endOffset": 8347
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 103,
                         "startColumn": 4,
@@ -201,7 +201,7 @@
                     "endOffset": 9224
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 114,
                         "startColumn": 4,
@@ -222,7 +222,7 @@
                     "endOffset": 9534
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 120,
                         "startColumn": 4,
@@ -243,7 +243,7 @@
                     "endOffset": 10079
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 127,
                         "startColumn": 4,
@@ -264,7 +264,7 @@
                     "endOffset": 11245
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 138,
                         "startColumn": 4,
@@ -285,7 +285,7 @@
                     "endOffset": 12081
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 161,
                         "startColumn": 4,
@@ -306,7 +306,7 @@
                     "endOffset": 12187
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 174,
                         "startColumn": 4,
@@ -327,7 +327,7 @@
                     "endOffset": 12928
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 177,
                         "startColumn": 4,
@@ -348,7 +348,7 @@
                     "endOffset": 13035
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 190,
                         "startColumn": 4,
@@ -369,7 +369,7 @@
                     "endOffset": 13410
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 193,
                         "startColumn": 4,
@@ -390,7 +390,7 @@
                     "endOffset": 15308
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 200,
                         "startColumn": 4,
@@ -411,7 +411,7 @@
                     "endOffset": 16087
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 230,
                         "startColumn": 4,
@@ -432,7 +432,7 @@
                     "endOffset": 17328
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 243,
                         "startColumn": 4,
@@ -453,7 +453,7 @@
                     "endOffset": 17657
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 252,
                         "startColumn": 4,
@@ -474,7 +474,7 @@
                     "endOffset": 17729
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 259,
                         "startColumn": 4,
@@ -495,7 +495,7 @@
                     "endOffset": 17801
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 262,
                         "startColumn": 4,
@@ -516,7 +516,7 @@
                     "endOffset": 17914
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 265,
                         "startColumn": 4,
@@ -537,7 +537,7 @@
                     "endOffset": 18079
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 268,
                         "startColumn": 4,
@@ -557,7 +557,7 @@
                     "endOffset": 18145
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 272,
                         "startColumn": 4,
@@ -576,7 +576,7 @@
                     "endOffset": 18210
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 273,
                         "startColumn": 4,
@@ -595,7 +595,7 @@
                     "endOffset": 18281
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 274,
                         "startColumn": 4,
@@ -614,7 +614,7 @@
                     "endOffset": 18346
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 275,
                         "startColumn": 4,
@@ -633,7 +633,7 @@
                     "endOffset": 18413
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 276,
                         "startColumn": 4,
@@ -652,7 +652,7 @@
                     "endOffset": 18479
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 277,
                         "startColumn": 4,
@@ -671,7 +671,7 @@
                     "endOffset": 18549
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 278,
                         "startColumn": 4,
@@ -690,7 +690,7 @@
                     "endOffset": 18616
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 279,
                         "startColumn": 4,
@@ -709,7 +709,7 @@
                     "endOffset": 18684
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 280,
                         "startColumn": 4,
@@ -728,7 +728,7 @@
                     "endOffset": 18761
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 281,
                         "startColumn": 4,
@@ -747,7 +747,7 @@
                     "endOffset": 18826
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 282,
                         "startColumn": 4,
@@ -766,7 +766,7 @@
                     "endOffset": 18894
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 283,
                         "startColumn": 4,
@@ -785,7 +785,7 @@
                     "endOffset": 18964
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 284,
                         "startColumn": 4,
@@ -804,7 +804,7 @@
                     "endOffset": 19036
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 285,
                         "startColumn": 4,
@@ -823,7 +823,7 @@
                     "endOffset": 19101
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 286,
                         "startColumn": 4,
@@ -842,7 +842,7 @@
                     "endOffset": 19167
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 287,
                         "startColumn": 4,
@@ -861,7 +861,7 @@
                     "endOffset": 19235
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 288,
                         "startColumn": 4,
@@ -880,7 +880,7 @@
                     "endOffset": 19304
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 289,
                         "startColumn": 4,
@@ -899,7 +899,7 @@
                     "endOffset": 19378
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 290,
                         "startColumn": 4,
@@ -918,7 +918,7 @@
                     "endOffset": 19449
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 291,
                         "startColumn": 4,
@@ -937,7 +937,7 @@
                     "endOffset": 19521
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 292,
                         "startColumn": 4,
@@ -956,7 +956,7 @@
                     "endOffset": 19589
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 293,
                         "startColumn": 4,
@@ -975,7 +975,7 @@
                     "endOffset": 19657
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 294,
                         "startColumn": 4,
@@ -994,7 +994,7 @@
                     "endOffset": 19739
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 295,
                         "startColumn": 4,
@@ -1013,7 +1013,7 @@
                     "endOffset": 19821
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 296,
                         "startColumn": 4,
@@ -1032,7 +1032,7 @@
                     "endOffset": 19903
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 297,
                         "startColumn": 4,
@@ -1051,7 +1051,7 @@
                     "endOffset": 19985
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 298,
                         "startColumn": 4,
@@ -1070,7 +1070,7 @@
                     "endOffset": 20066
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 299,
                         "startColumn": 4,
@@ -1089,7 +1089,7 @@
                     "endOffset": 20177
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 300,
                         "startColumn": 4,
@@ -1108,7 +1108,7 @@
                     "endOffset": 20251
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 301,
                         "startColumn": 4,
@@ -1127,7 +1127,7 @@
                     "endOffset": 20319
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 302,
                         "startColumn": 4,
@@ -1146,7 +1146,7 @@
                     "endOffset": 20390
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 303,
                         "startColumn": 4,
@@ -1165,7 +1165,7 @@
                     "endOffset": 20451
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 304,
                         "startColumn": 4,
@@ -1184,7 +1184,7 @@
                     "endOffset": 20523
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 305,
                         "startColumn": 4,
@@ -1203,7 +1203,7 @@
                     "endOffset": 20628
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 306,
                         "startColumn": 4,
@@ -1222,7 +1222,7 @@
                     "endOffset": 20715
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 307,
                         "startColumn": 4,
@@ -1241,7 +1241,7 @@
                     "endOffset": 20799
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 308,
                         "startColumn": 4,
@@ -1260,7 +1260,7 @@
                     "endOffset": 20903
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 309,
                         "startColumn": 4,
@@ -1279,7 +1279,7 @@
                     "endOffset": 21006
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 310,
                         "startColumn": 4,
@@ -1298,7 +1298,7 @@
                     "endOffset": 21113
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 311,
                         "startColumn": 4,
@@ -1317,7 +1317,7 @@
                     "endOffset": 21185
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 312,
                         "startColumn": 4,
@@ -1336,7 +1336,7 @@
                     "endOffset": 21250
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 313,
                         "startColumn": 4,
@@ -1355,7 +1355,7 @@
                     "endOffset": 21322
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 314,
                         "startColumn": 4,
@@ -1374,7 +1374,7 @@
                     "endOffset": 21405
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 315,
                         "startColumn": 4,
@@ -1393,7 +1393,7 @@
                     "endOffset": 21493
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 316,
                         "startColumn": 4,
@@ -1412,7 +1412,7 @@
                     "endOffset": 21590
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 317,
                         "startColumn": 4,
@@ -1431,7 +1431,7 @@
                     "endOffset": 21663
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 318,
                         "startColumn": 4,
@@ -1450,7 +1450,7 @@
                     "endOffset": 21751
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 319,
                         "startColumn": 4,
@@ -1469,7 +1469,7 @@
                     "endOffset": 21830
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 320,
                         "startColumn": 4,
@@ -1488,7 +1488,7 @@
                     "endOffset": 21915
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 321,
                         "startColumn": 4,
@@ -1507,7 +1507,7 @@
                     "endOffset": 22005
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 322,
                         "startColumn": 4,
@@ -1526,7 +1526,7 @@
                     "endOffset": 22097
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 323,
                         "startColumn": 4,
@@ -1545,7 +1545,7 @@
                     "endOffset": 22177
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 324,
                         "startColumn": 4,
@@ -1564,7 +1564,7 @@
                     "endOffset": 22263
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 325,
                         "startColumn": 4,
@@ -1583,7 +1583,7 @@
                     "endOffset": 22345
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 326,
                         "startColumn": 4,
@@ -1602,7 +1602,7 @@
                     "endOffset": 22440
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 327,
                         "startColumn": 4,
@@ -1621,7 +1621,7 @@
                     "endOffset": 22542
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 328,
                         "startColumn": 4,
@@ -1640,7 +1640,7 @@
                     "endOffset": 22624
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 329,
                         "startColumn": 4,
@@ -1659,7 +1659,7 @@
                     "endOffset": 22754
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 330,
                         "startColumn": 4,
@@ -1678,7 +1678,7 @@
                     "endOffset": 22865
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 331,
                         "startColumn": 4,
@@ -1697,7 +1697,7 @@
                     "endOffset": 22967
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 332,
                         "startColumn": 4,
@@ -1716,7 +1716,7 @@
                     "endOffset": 23054
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 333,
                         "startColumn": 4,
@@ -1735,7 +1735,7 @@
                     "endOffset": 23169
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 334,
                         "startColumn": 4,
@@ -1754,7 +1754,7 @@
                     "endOffset": 23239
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 335,
                         "startColumn": 4,
@@ -1773,7 +1773,7 @@
                     "endOffset": 23343
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 336,
                         "startColumn": 4,
@@ -1792,7 +1792,7 @@
                     "endOffset": 23451
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 337,
                         "startColumn": 4,
@@ -1811,7 +1811,7 @@
                     "endOffset": 23536
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 338,
                         "startColumn": 4,
@@ -1830,7 +1830,7 @@
                     "endOffset": 23632
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 339,
                         "startColumn": 4,
@@ -1849,7 +1849,7 @@
                     "endOffset": 23746
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 340,
                         "startColumn": 4,
@@ -1868,7 +1868,7 @@
                     "endOffset": 23848
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 341,
                         "startColumn": 4,
@@ -1887,7 +1887,7 @@
                     "endOffset": 23948
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 342,
                         "startColumn": 4,
@@ -1906,7 +1906,7 @@
                     "endOffset": 24063
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 343,
                         "startColumn": 4,
@@ -1925,7 +1925,7 @@
                     "endOffset": 24172
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 344,
                         "startColumn": 4,
@@ -1944,7 +1944,7 @@
                     "endOffset": 24288
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 345,
                         "startColumn": 4,
@@ -1963,7 +1963,7 @@
                     "endOffset": 24381
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 346,
                         "startColumn": 4,
@@ -1982,7 +1982,7 @@
                     "endOffset": 24470
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 347,
                         "startColumn": 4,
@@ -2001,7 +2001,7 @@
                     "endOffset": 24546
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 348,
                         "startColumn": 4,
@@ -2020,7 +2020,7 @@
                     "endOffset": 24656
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 349,
                         "startColumn": 4,
@@ -2039,7 +2039,7 @@
                     "endOffset": 24729
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 350,
                         "startColumn": 4,
@@ -2058,7 +2058,7 @@
                     "endOffset": 24832
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 351,
                         "startColumn": 4,
@@ -2077,7 +2077,7 @@
                     "endOffset": 24929
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 352,
                         "startColumn": 4,
@@ -2096,7 +2096,7 @@
                     "endOffset": 25037
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 353,
                         "startColumn": 4,
@@ -2115,7 +2115,7 @@
                     "endOffset": 25126
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 354,
                         "startColumn": 4,
@@ -2134,7 +2134,7 @@
                     "endOffset": 25212
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 355,
                         "startColumn": 4,
@@ -2153,7 +2153,7 @@
                     "endOffset": 25318
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 356,
                         "startColumn": 4,
@@ -2172,7 +2172,7 @@
                     "endOffset": 25423
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 357,
                         "startColumn": 4,
@@ -2191,7 +2191,7 @@
                     "endOffset": 25542
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 358,
                         "startColumn": 4,
@@ -2210,7 +2210,7 @@
                     "endOffset": 25616
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 359,
                         "startColumn": 4,
@@ -2229,7 +2229,7 @@
                     "endOffset": 25683
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 360,
                         "startColumn": 4,
@@ -2248,7 +2248,7 @@
                     "endOffset": 25757
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 361,
                         "startColumn": 4,
@@ -2267,7 +2267,7 @@
                     "endOffset": 25853
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 362,
                         "startColumn": 4,
@@ -2286,7 +2286,7 @@
                     "endOffset": 25943
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 363,
                         "startColumn": 4,
@@ -2305,7 +2305,7 @@
                     "endOffset": 26042
                 },
                 "from": {
-                    "file": "D:\\adt-bundle-windows-x64\\workspace\\studio\\project\\MtimeApp\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
+                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\SMSSDK\\build\\intermediates\\bundles\\debug\\res\\values-en\\values-en.xml",
                     "position": {
                         "startLine": 364,
                         "startColumn": 4,

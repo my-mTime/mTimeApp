@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stepper="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_shoppingcart_checked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/shopping_cart_checked" />
+
+                    <TextView
+                        android:id="@+id/tv_shoppingcart_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/iv_shoppingcart_checked"
+                        android:text="超人钢铁之躯运动套装" />
+
+                    <ImageView
+                        android:id="@+id/iv_shoppingcart_pic"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignLeft="@id/tv_shoppingcart_name"
+                        android:layout_below="@id/tv_shoppingcart_name"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/img_default_45x45" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/iv_shoppingcart_pic"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/iv_shoppingcart_pic"
+                        android:paddingBottom="10dp">
+
+                        <com.bigkoo.snappingstepper.SnappingStepper
+                            android:id="@+id/stepper"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            stepper:max="99"
+                            stepper:min="0"
+                            stepper:mode="custom"
+                            stepper:step="1"
+                            stepper:stepper_buttonBackground="#ffffff"
+                            stepper:stepper_contentBackground="@drawable/shoppingcart_bg"
+                            stepper:stepper_leftButtonBackground="@drawable/shoppingcart_bg"
+                            stepper:stepper_rightButtonBackground="@drawable/shoppingcart_bg"
+                            stepper:text="0"
+                            stepper:value="0">
+
+                        </com.bigkoo.snappingstepper.SnappingStepper>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/tv_shoppingcart_name"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_shoppingcart_currprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥149.00" />
+
+                        <TextView
+                            android:id="@+id/tv_shoppingcart_oriprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="￥209.00" />
+
+                        <TextView
+                            android:id="@+id/tv_shoppingcart_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="x1" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -7,8 +7,12 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/benhuo_library/benhuo_library.iml" filepath="$PROJECT_DIR$/benhuo_library/benhuo_library.iml" />
       <module fileurl="file://$PROJECT_DIR$/citylist_demo/citylist_demo.iml" filepath="$PROJECT_DIR$/citylist_demo/citylist_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/etablistview_library/etablistview_library.iml" filepath="$PROJECT_DIR$/etablistview_library/etablistview_library.iml" />
       <module fileurl="file://$PROJECT_DIR$/okhttputils/okhttputils.iml" filepath="$PROJECT_DIR$/okhttputils/okhttputils.iml" />
       <module fileurl="file://$PROJECT_DIR$/pulltorefresh_library/pulltorefresh_library.iml" filepath="$PROJECT_DIR$/pulltorefresh_library/pulltorefresh_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/selectMovieSeatmaster/selectMovieSeatmaster.iml" filepath="$PROJECT_DIR$/selectMovieSeatmaster/selectMovieSeatmaster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/snappingstepper/snappingstepper.iml" filepath="$PROJECT_DIR$/snappingstepper/snappingstepper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/snappingstepper_app/snappingstepper_app.iml" filepath="$PROJECT_DIR$/snappingstepper_app/snappingstepper_app.iml" />
     </modules>
   </component>
 </project>

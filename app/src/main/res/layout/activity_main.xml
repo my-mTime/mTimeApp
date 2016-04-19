@@ -28,25 +28,25 @@
             />
         <RadioButton
             android:id="@+id/rb_BuyTicket"
-            android:text="首页"
+            android:text="购票"
             android:drawableTop="@drawable/rb_buyticket_selector"
             style="@style/BtnTheme"
             />
         <RadioButton
             android:id="@+id/rb_store"
-            android:text="首页"
+            android:text="商城"
             android:drawableTop="@drawable/rb_store_selector"
             style="@style/BtnTheme"
             />
         <RadioButton
             android:id="@+id/rb_discover"
-            android:text="首页"
+            android:text="发现"
             android:drawableTop="@drawable/rb_discover_selector"
             style="@style/BtnTheme"
             />
         <RadioButton
             android:id="@+id/rb_user"
-            android:text="首页"
+            android:text="我的"
             android:drawableTop="@drawable/rb_user_selector"
             style="@style/BtnTheme"
             />

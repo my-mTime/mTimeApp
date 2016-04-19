@@ -91,20 +91,32 @@
         </LinearLayout>
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
             android:layout_gravity="right">
 
             <ImageView
                 android:id="@+id/iv_hopointde_pic"
-                android:layout_width="90dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:src="@drawable/img_default_300x200" />
+
+            <ImageView
+                android:id="@+id/iv_hopointde_pic_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/homefeed_play" />
         </RelativeLayout>
 
 
     </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#22000000"></View>
 
 
 </LinearLayout>
