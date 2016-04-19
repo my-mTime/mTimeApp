@@ -3,7 +3,9 @@ package com.atguigu.mtimeapp.daiwei;
 import android.app.Activity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ListView;
 
+import com.atguigu.mtimeapp.R;
 import com.atguigu.mtimeapp.daiwei.domain.DiscoverHeaderEntity;
 import com.atguigu.mtimeapp.utils.ContantsUtils;
 import com.google.gson.Gson;
@@ -22,12 +24,20 @@ public abstract class DiscoverBasepage {
     public final Activity mActivity;
     public final View childView;
     private DiscoverHeaderEntity headerEntity;
+    public ListView lv_discover;
 
     public DiscoverBasepage(Activity activity) {
         this.mActivity = activity;
         this.childView = initView();
 
+        init();
         getHeaderDataFromNet();
+    }
+
+    private void init() {
+        lv_discover = (ListView) View.inflate(mActivity, R.layout.discover, null);
+        View header = View.inflate(mActivity, R.layout.discover_header, null);
+        lv_discover.addHeaderView(header);
     }
 
     public abstract View initView();
