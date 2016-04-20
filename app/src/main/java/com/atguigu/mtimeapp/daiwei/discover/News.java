@@ -14,7 +14,6 @@ import android.widget.TextView;
 import com.atguigu.mtimeapp.R;
 import com.atguigu.mtimeapp.daiwei.DiscoverBasepage;
 import com.atguigu.mtimeapp.daiwei.domain.DiscoverHeaderEntity;
-import com.atguigu.mtimeapp.daiwei.domain.DiscoverNewsEntity;
 import com.atguigu.mtimeapp.daiwei.domain.DiscoverPrevueEntity;
 import com.atguigu.mtimeapp.utils.ContantsUtils;
 import com.example.benhuo_library.lib.utils.image.image.ImageUtils;
@@ -28,7 +27,7 @@ import okhttp3.Request;
 
 /**
  * Created by daiwei on 2016/4/13.
- * <p/>
+ *
  * 发现--新闻页面
  */
 public class News extends DiscoverBasepage {
@@ -37,6 +36,11 @@ public class News extends DiscoverBasepage {
      * 头部数据
      */
     private DiscoverHeaderEntity headerEntity;
+    /**
+     * 列表数据
+     */
+    private List<DiscoverPrevueEntity.TrailersEntity> trailers;
+
     public ListView lv_discover;
     private TextView tv_disconver_header_title;
     private ImageView iv_header_bg;
@@ -45,11 +49,11 @@ public class News extends DiscoverBasepage {
     private ImageView ib_header_prevue_play;
     private ImageView iv_header_filmComment_icon;
     private LinearLayout ll_header_news_ticketList;
-    private RadioGroup rg_header_leaderboard_topList;
-    private List<DiscoverNewsEntity.NewsListEntity> newsList;
+    private RadioGroup rg_header_leaderboard_topList;;
 
     public News(Activity activity) {
         super(activity);
+//        this.headerEntity = headerEntity;
     }
 
     @Override
@@ -71,42 +75,14 @@ public class News extends DiscoverBasepage {
         return lv_discover;
     }
 
+
     @Override
     public void initData() {
+        super.initData();
         Log.i("TAG", "发现--新闻页面数据初始化");
+
         getHeaderDataFromNet();
         getDataFromNet();
-    }
-
-    /**
-     * 获取列表数据
-     */
-    private void getDataFromNet() {
-        OkHttpUtils.get().url(ContantsUtils.discover_prevue).build().execute(new StringCallback() {
-            @Override
-            public void onError(Request request, Exception e) {
-                Log.i("TAG", "onError===" + e);
-            }
-
-            @Override
-            public void onResponse(String response) {
-                processData(response);
-            }
-        });
-    }
-
-    private void processData(String json) {
-        DiscoverNewsEntity newsEntity = parseJson(json);
-        newsList = newsEntity.getNewsList();
-
-        if(newsList != null&& !newsList.isEmpty()) {
-            lv_discover.setAdapter(new NewsAdapter());
-        }
-
-    }
-
-    private DiscoverNewsEntity parseJson(String json) {
-        return new Gson().fromJson(json, DiscoverNewsEntity.class);
     }
 
     /**
@@ -121,6 +97,7 @@ public class News extends DiscoverBasepage {
 
             @Override
             public void onResponse(String response) {
+
                 processHeaderData(response);
             }
         });
@@ -136,22 +113,57 @@ public class News extends DiscoverBasepage {
         iv_header_filmComment_icon.setVisibility(View.GONE);
         tv_disconver_header_name.setVisibility(View.GONE);
 
-        if (headerEntity != null) {
+        if(headerEntity !=null) {
             DiscoverHeaderEntity.NewsEntity news = headerEntity.getNews();
 
             tv_disconver_header_title.setText(news.getTitle());
             ImageUtils.loadImage(mActivity, news.getImageUrl(), iv_header_bg);
         }
     }
-    public class NewsAdapter extends BaseAdapter {
+
+    /**
+     * 联网获取列表数据
+     */
+    private void getDataFromNet() {
+        OkHttpUtils.get().url(ContantsUtils.discover_prevue).build().execute(new StringCallback() {
+            @Override
+            public void onError(Request request, Exception e) {
+                Log.i("TAG", "onError===" + e);
+            }
+
+            @Override
+            public void onResponse(String response) {
+                processData(response);
+            }
+        });
+    }
+
+    /**
+     * 处理列表数据
+     * @param response
+     */
+    private void processData(String response) {
+        DiscoverPrevueEntity prevueEntity = parseJson(response);
+        trailers = prevueEntity.getTrailers();
+
+        if(trailers !=null && !trailers.isEmpty()) {
+            lv_discover.setAdapter(new PrevueAdapter());
+        }
+    }
+
+    private DiscoverPrevueEntity parseJson(String response) {
+        return new Gson().fromJson(response, DiscoverPrevueEntity.class);
+    }
+
+    public class PrevueAdapter extends BaseAdapter {
         @Override
         public int getCount() {
-            return newsList.size();
+            return trailers.size();
         }
 
         @Override
-        public Object getItem(int position) {
-            return newsList.get(position);
+        public DiscoverPrevueEntity.TrailersEntity getItem(int position) {
+            return trailers.get(position);
         }
 
         @Override
@@ -174,7 +186,7 @@ public class News extends DiscoverBasepage {
                 holder = (ViewHolder) convertView.getTag();
             }
 
-            DiscoverPrevueEntity.TrailersEntity trailersEntity = (DiscoverPrevueEntity.TrailersEntity) getItem(position);
+            DiscoverPrevueEntity.TrailersEntity trailersEntity = getItem(position);
             String movieName = trailersEntity.getMovieName();
             holder.tv_title.setText(movieName);
             String summary = trailersEntity.getSummary();

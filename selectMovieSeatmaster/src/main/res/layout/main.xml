@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/foreground_dark" >
+    <TextView
+        android:id="@+id/tv_cinema_screen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_100dp"
+        android:text="@string/cinema_screen"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center" />
+
+    <com.dahuo.android.cinema.SeatTableView
+        android:id="@+id/seatviewcont"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_cinema_screen"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+    </com.dahuo.android.cinema.SeatTableView>
+    <LinearLayout
+        android:id="@+id/seatraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/trans_black"
+        android:orientation="vertical"
+        android:layout_below="@+id/tv_cinema_screen">
+    </LinearLayout>
+
+</RelativeLayout>

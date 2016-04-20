@@ -1,30 +1,29 @@
 package com.atguigu.mtimeapp.daiwei.discover;
 
         import android.app.Activity;
-        import android.util.Log;
-        import android.view.View;
-        import android.view.ViewGroup;
-        import android.widget.BaseAdapter;
-        import android.widget.ImageView;
-        import android.widget.LinearLayout;
-        import android.widget.ListView;
-        import android.widget.RadioGroup;
-        import android.widget.TextView;
+import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
-        import com.atguigu.mtimeapp.R;
-        import com.atguigu.mtimeapp.daiwei.DiscoverBasepage;
-        import com.atguigu.mtimeapp.daiwei.domain.DiscoverHeaderEntity;
-        import com.atguigu.mtimeapp.daiwei.domain.DiscoverNewsEntity;
-        import com.atguigu.mtimeapp.daiwei.domain.DiscoverPrevueEntity;
-        import com.atguigu.mtimeapp.utils.ContantsUtils;
-        import com.example.benhuo_library.lib.utils.image.image.ImageUtils;
-        import com.google.gson.Gson;
-        import com.zhy.http.okhttp.OkHttpUtils;
-        import com.zhy.http.okhttp.callback.StringCallback;
+import com.atguigu.mtimeapp.R;
+import com.atguigu.mtimeapp.daiwei.DiscoverBasepage;
+import com.atguigu.mtimeapp.daiwei.domain.DiscoverHeaderEntity;
+import com.atguigu.mtimeapp.daiwei.domain.DiscoverLeaderboardEntity;
+import com.atguigu.mtimeapp.utils.ContantsUtils;
+import com.example.benhuo_library.lib.utils.image.image.ImageUtils;
+import com.google.gson.Gson;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
 
-        import java.util.List;
+import java.util.List;
 
-        import okhttp3.Request;
+import okhttp3.Request;
 
 /**
  * Created by daiwei on 2016/4/13.
@@ -46,7 +45,7 @@ public class Leaderboard extends DiscoverBasepage {
     private ImageView iv_header_filmComment_icon;
     private LinearLayout ll_header_news_ticketList;
     private RadioGroup rg_header_leaderboard_topList;
-    private List<DiscoverNewsEntity.NewsListEntity> newsList;
+    private List<DiscoverLeaderboardEntity.TopListsEntity> topLists;
 
     public Leaderboard(Activity activity) {
         super(activity);
@@ -83,7 +82,7 @@ public class Leaderboard extends DiscoverBasepage {
      * 获取列表数据
      */
     private void getDataFromNet() {
-        OkHttpUtils.get().url(ContantsUtils.discover_prevue).build().execute(new StringCallback() {
+        OkHttpUtils.get().url(ContantsUtils.discover_leaderboard).build().execute(new StringCallback() {
             @Override
             public void onError(Request request, Exception e) {
                 Log.i("TAG", "onError===" + e);
@@ -97,17 +96,17 @@ public class Leaderboard extends DiscoverBasepage {
     }
 
     private void processData(String json) {
-        DiscoverNewsEntity newsEntity = parseJson(json);
-        newsList = newsEntity.getNewsList();
+        DiscoverLeaderboardEntity LeaderboardEntity = parseJson(json);
+        topLists = LeaderboardEntity.getTopLists();
 
-        if(newsList != null&& !newsList.isEmpty()) {
+        if(topLists != null&& !topLists.isEmpty()) {
             lv_discover.setAdapter(new TopListAdapter());
         }
 
     }
 
-    private DiscoverNewsEntity parseJson(String json) {
-        return new Gson().fromJson(json, DiscoverNewsEntity.class);
+    private DiscoverLeaderboardEntity parseJson(String json) {
+        return new Gson().fromJson(json, DiscoverLeaderboardEntity.class);
     }
 
     /**
@@ -147,12 +146,12 @@ public class Leaderboard extends DiscoverBasepage {
     public class TopListAdapter extends BaseAdapter {
         @Override
         public int getCount() {
-            return newsList.size();
+            return topLists.size();
         }
 
         @Override
         public Object getItem(int position) {
-            return newsList.get(position);
+            return topLists.get(position);
         }
 
         @Override
@@ -165,9 +164,8 @@ public class Leaderboard extends DiscoverBasepage {
             ViewHolder holder;
             if (convertView == null) {
                 holder = new ViewHolder();
-                convertView = View.inflate(mActivity, R.layout.item_prevue, null);
-                holder.iv_icon = (ImageView) convertView.findViewById(R.id.iv_item_prevue_icon);
-                holder.tv_title = (TextView) convertView.findViewById(R.id.tv_item_prevue_title);
+                convertView = View.inflate(mActivity, R.layout.item_leaderboard, null);
+                holder.tv_nameCn = (TextView) convertView.findViewById(R.id.tv_item_prevue_title);
                 holder.tv_summary = (TextView) convertView.findViewById(R.id.tv_item_prevue_summary);
 
                 convertView.setTag(holder);
@@ -175,20 +173,17 @@ public class Leaderboard extends DiscoverBasepage {
                 holder = (ViewHolder) convertView.getTag();
             }
 
-            DiscoverPrevueEntity.TrailersEntity trailersEntity = (DiscoverPrevueEntity.TrailersEntity) getItem(position);
-            String movieName = trailersEntity.getMovieName();
-            holder.tv_title.setText(movieName);
-            String summary = trailersEntity.getSummary();
+            DiscoverLeaderboardEntity.TopListsEntity topListsEntity = (DiscoverLeaderboardEntity.TopListsEntity) getItem(position);
+            String movieName = topListsEntity.getTopListNameCn();
+            holder.tv_nameCn.setText(movieName);
+            String summary = topListsEntity.getSummary();
             holder.tv_summary.setText(summary);
-            String coverImg = trailersEntity.getCoverImg();
-            ImageUtils.loadImage(mActivity, coverImg, holder.iv_icon, R.drawable.img_default_300x200);
 
             return convertView;
         }
 
         private class ViewHolder{
-            ImageView iv_icon;
-            TextView tv_title;
+            TextView tv_nameCn;
             TextView tv_summary;
         }
     }
