@@ -514,7 +514,7 @@ public class HomeTimeBean {
             private int id;
             private String image;
             private String name;
-            private int rating;
+            private double rating;
             private String releaseLocation;
             private String runtime;
             private String title;
@@ -536,7 +536,7 @@ public class HomeTimeBean {
                 this.name = name;
             }
 
-            public void setRating(int rating) {
+            public void setRating(double rating) {
                 this.rating = rating;
             }
 
@@ -584,7 +584,7 @@ public class HomeTimeBean {
                 return name;
             }
 
-            public int getRating() {
+            public double getRating() {
                 return rating;
             }
 

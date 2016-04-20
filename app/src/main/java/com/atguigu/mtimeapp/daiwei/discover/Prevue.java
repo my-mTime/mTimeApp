@@ -80,12 +80,7 @@ public class Prevue extends DiscoverBasepage {
     public void initData() {
         super.initData();
         Log.i("TAG", "发现--预告片页面数据初始化");
-        if(trailers!= null) {
-//            DiscoverHeaderEntity.TrailerEntity trailer = headerEntity.getTrailer();
-//            tv_disconver_header_title.setText(trailer.getTitle());
-//
-//            ImageUtils.loadImage(mActivity, trailer.getImageUrl(), iv_header_bg);
-        }
+
         getHeaderDataFromNet();
         getDataFromNet();
     }
