@@ -11,8 +11,8 @@
 
         <ImageView
             android:id="@+id/iv_item_prevue_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
             android:src="@drawable/img_default_300x200" />
 
         <ImageView
@@ -50,7 +50,7 @@
             android:ellipsize="end"
             android:layout_height="wrap_content"
             android:text="警医匪三人自我执念引发危机"
-            android:textColor="#dd000000"
-            android:textSize="18sp" />
+            android:textColor="#66000000"
+            android:textSize="15sp" />
     </LinearLayout>
 </LinearLayout>

@@ -6,11 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.atguigu.mtimeapp.R;
 import com.atguigu.mtimeapp.daiwei.DiscoverBasepage;
+import com.atguigu.mtimeapp.daiwei.domain.DiscoverHeaderEntity;
 import com.atguigu.mtimeapp.daiwei.domain.DiscoverPrevueEntity;
 import com.atguigu.mtimeapp.utils.ContantsUtils;
 import com.example.benhuo_library.lib.utils.image.image.ImageUtils;
@@ -32,11 +35,21 @@ public class Prevue extends DiscoverBasepage {
     /**
      * 头部数据
      */
-//    private final DiscoverHeaderEntity headerEntity;
-    public ListView lv_discover;
+    private DiscoverHeaderEntity headerEntity;
+    /**
+     * 列表数据
+     */
     private List<DiscoverPrevueEntity.TrailersEntity> trailers;
+
+    public ListView lv_discover;
     private TextView tv_disconver_header_title;
     private ImageView iv_header_bg;
+    private TextView tv_disconver_header_name;
+    private TextView tv_header_news_old;
+    private ImageView ib_header_prevue_play;
+    private ImageView iv_header_filmComment_icon;
+    private LinearLayout ll_header_news_ticketList;
+    private RadioGroup rg_header_leaderboard_topList;;
 
     public Prevue(Activity activity) {
         super(activity);
@@ -51,6 +64,14 @@ public class Prevue extends DiscoverBasepage {
 
         tv_disconver_header_title = (TextView) header.findViewById(R.id.tv_disconver_header_title);
         iv_header_bg = (ImageView) header.findViewById(R.id.iv_header_bg);
+
+        iv_header_filmComment_icon = (ImageView) header.findViewById(R.id.iv_header_filmComment_icon);
+        tv_disconver_header_name = (TextView) header.findViewById(R.id.tv_disconver_header_name);
+        tv_header_news_old = (TextView) header.findViewById(R.id.tv_header_news_old);
+
+        ll_header_news_ticketList = (LinearLayout) header.findViewById(R.id.ll_header_news_ticketList);
+        rg_header_leaderboard_topList = (RadioGroup) header.findViewById(R.id.rg_header_leaderboard_topList);
+        ib_header_prevue_play = (ImageView) header.findViewById(R.id.ib_header_prevue_play);
         return lv_discover;
     }
 
@@ -65,7 +86,44 @@ public class Prevue extends DiscoverBasepage {
 //
 //            ImageUtils.loadImage(mActivity, trailer.getImageUrl(), iv_header_bg);
         }
+        getHeaderDataFromNet();
         getDataFromNet();
+    }
+
+    /**
+     * 联网获取头部数据
+     */
+    private void getHeaderDataFromNet() {
+        OkHttpUtils.get().url(ContantsUtils.discover_header).build().execute(new StringCallback() {
+            @Override
+            public void onError(Request request, Exception e) {
+                Log.i("TAG", "onError===" + e);
+            }
+
+            @Override
+            public void onResponse(String response) {
+
+                processHeaderData(response);
+            }
+        });
+    }
+
+    private void processHeaderData(String response) {
+        headerEntity = new Gson().fromJson(response, DiscoverHeaderEntity.class);
+
+        tv_header_news_old.setVisibility(View.GONE);
+        ll_header_news_ticketList.setVisibility(View.GONE);
+        ib_header_prevue_play.setVisibility(View.VISIBLE);
+        rg_header_leaderboard_topList.setVisibility(View.GONE);
+        iv_header_filmComment_icon.setVisibility(View.GONE);
+        tv_disconver_header_name.setVisibility(View.GONE);
+
+        if(headerEntity !=null) {
+            DiscoverHeaderEntity.TrailerEntity trailer = headerEntity.getTrailer();
+
+            tv_disconver_header_title.setText(trailer.getTitle());
+            ImageUtils.loadImage(mActivity, trailer.getImageUrl(), iv_header_bg);
+        }
     }
 
     /**
@@ -86,7 +144,7 @@ public class Prevue extends DiscoverBasepage {
     }
 
     /**
-     * 处理数据
+     * 处理列表数据
      * @param response
      */
     private void processData(String response) {

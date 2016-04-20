@@ -43,7 +43,7 @@ public class ContantsUtils {
     /**
      * 发现 -- 排行榜（每个排行榜的数据）
      */
-    public static final String discover_filmComment_topList = "http://api.m.mtime.cn/TopList/TopListDetailsByRecommend.api?pageIndex=1&pageSubAreaID=2066&locationId={2}";
+    public static final String discover_leaderboard_topList = "http://api.m.mtime.cn/TopList/TopListDetailsByRecommend.api?pageIndex=1&pageSubAreaID=2066&locationId={2}";
     /**
      * 发现 -- 四个顶部的数据
      */
