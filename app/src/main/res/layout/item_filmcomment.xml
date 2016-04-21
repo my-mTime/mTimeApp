@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_item_prevue_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="徐氏武侠观的忠实体现"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_item_prevue_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:lines="2"
+                android:text="文/杀手里昂从拍摄时间上来说，《箭士柳白猿》应该是徐皓峰的第二部作品，在《倭寇的踪迹》"
+                android:textColor="#66000000"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_item_comment_userIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/img_default_45x45" />
+
+                <TextView
+                    android:id="@+id/tv_item_comment_userName"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="杀手里昂Leon"
+                    android:textColor="#66000000"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-评《"
+                    android:textColor="#66000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_item_comment_movieName"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="箭士柳白猿"
+                    android:textColor="#dd000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="》"
+                    android:textColor="#66000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_item_comment_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#55ff11"
+                    android:text="9.1"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_item_comment_poster"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:background="@drawable/img_default"
+            android:scaleType="centerCrop" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="#33000000" />
+
+</LinearLayout>

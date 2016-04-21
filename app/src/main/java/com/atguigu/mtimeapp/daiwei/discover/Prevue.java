@@ -53,7 +53,6 @@ public class Prevue extends DiscoverBasepage {
 
     public Prevue(Activity activity) {
         super(activity);
-//        this.headerEntity = headerEntity;
     }
 
     @Override
@@ -117,7 +116,7 @@ public class Prevue extends DiscoverBasepage {
             DiscoverHeaderEntity.TrailerEntity trailer = headerEntity.getTrailer();
 
             tv_disconver_header_title.setText(trailer.getTitle());
-            ImageUtils.loadImage(mActivity, trailer.getImageUrl(), iv_header_bg);
+            ImageUtils.loadImage(mActivity, trailer.getImageUrl(), iv_header_bg, R.drawable.img_default_300x200);
         }
     }
 

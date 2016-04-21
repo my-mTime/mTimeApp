@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.atguigu.mtimeapp.R;
 import com.atguigu.mtimeapp.daiwei.DiscoverBasepage;
 import com.atguigu.mtimeapp.daiwei.domain.DiscoverHeaderEntity;
-import com.atguigu.mtimeapp.daiwei.domain.DiscoverPrevueEntity;
+import com.atguigu.mtimeapp.daiwei.domain.DiscoverNewsEntity;
 import com.atguigu.mtimeapp.utils.ContantsUtils;
 import com.example.benhuo_library.lib.utils.image.image.ImageUtils;
 import com.google.gson.Gson;
@@ -39,7 +39,7 @@ public class News extends DiscoverBasepage {
     /**
      * 列表数据
      */
-    private List<DiscoverPrevueEntity.TrailersEntity> trailers;
+    private List<DiscoverNewsEntity.NewsListEntity> newsListEntities;
 
     public ListView lv_discover;
     private TextView tv_disconver_header_title;
@@ -53,7 +53,6 @@ public class News extends DiscoverBasepage {
 
     public News(Activity activity) {
         super(activity);
-//        this.headerEntity = headerEntity;
     }
 
     @Override
@@ -117,7 +116,7 @@ public class News extends DiscoverBasepage {
             DiscoverHeaderEntity.NewsEntity news = headerEntity.getNews();
 
             tv_disconver_header_title.setText(news.getTitle());
-            ImageUtils.loadImage(mActivity, news.getImageUrl(), iv_header_bg);
+            ImageUtils.loadImage(mActivity, news.getImageUrl(), iv_header_bg, R.drawable.img_default_300x200);
         }
     }
 
@@ -125,7 +124,7 @@ public class News extends DiscoverBasepage {
      * 联网获取列表数据
      */
     private void getDataFromNet() {
-        OkHttpUtils.get().url(ContantsUtils.discover_prevue).build().execute(new StringCallback() {
+        OkHttpUtils.get().url(ContantsUtils.discover_news).build().execute(new StringCallback() {
             @Override
             public void onError(Request request, Exception e) {
                 Log.i("TAG", "onError===" + e);
@@ -143,27 +142,51 @@ public class News extends DiscoverBasepage {
      * @param response
      */
     private void processData(String response) {
-        DiscoverPrevueEntity prevueEntity = parseJson(response);
-        trailers = prevueEntity.getTrailers();
+        DiscoverNewsEntity newsEntity = parseJson(response);
+        newsListEntities = newsEntity.getNewsList();
 
-        if(trailers !=null && !trailers.isEmpty()) {
-            lv_discover.setAdapter(new PrevueAdapter());
+        if(newsListEntities !=null && !newsListEntities.isEmpty()) {
+            lv_discover.setAdapter(new NewsAdapter());
         }
     }
 
-    private DiscoverPrevueEntity parseJson(String response) {
-        return new Gson().fromJson(response, DiscoverPrevueEntity.class);
+    private DiscoverNewsEntity parseJson(String response) {
+        return new Gson().fromJson(response, DiscoverNewsEntity.class);
     }
 
-    public class PrevueAdapter extends BaseAdapter {
+    public class NewsAdapter extends BaseAdapter {
+
+        @Override
+        public int getViewTypeCount() {
+            return 3;
+        }
+
+        @Override
+        public int getItemViewType(int position) {
+            int itemViewType = -1;
+            int type = newsListEntities.get(position).getType();
+            switch (type) {
+                case  0:
+                    itemViewType = 0;
+                    break;
+                case  1:
+                    itemViewType = 1;
+                    break;
+                case  2:
+                    itemViewType = 2;
+                    break;
+            }
+            return itemViewType;
+        }
+
         @Override
         public int getCount() {
-            return trailers.size();
+            return newsListEntities.size();
         }
 
         @Override
-        public DiscoverPrevueEntity.TrailersEntity getItem(int position) {
-            return trailers.get(position);
+        public DiscoverNewsEntity.NewsListEntity getItem(int position) {
+            return newsListEntities.get(position);
         }
 
         @Override
@@ -173,34 +196,77 @@ public class News extends DiscoverBasepage {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
+            int itemViewType = getItemViewType(position);
             ViewHolder holder;
             if (convertView == null) {
                 holder = new ViewHolder();
-                convertView = View.inflate(mActivity, R.layout.item_prevue, null);
-                holder.iv_icon = (ImageView) convertView.findViewById(R.id.iv_item_prevue_icon);
-                holder.tv_title = (TextView) convertView.findViewById(R.id.tv_item_prevue_title);
-                holder.tv_summary = (TextView) convertView.findViewById(R.id.tv_item_prevue_summary);
+                convertView = initTypeView(convertView, itemViewType, holder);
 
                 convertView.setTag(holder);
             } else {
                 holder = (ViewHolder) convertView.getTag();
             }
 
-            DiscoverPrevueEntity.TrailersEntity trailersEntity = getItem(position);
-            String movieName = trailersEntity.getMovieName();
-            holder.tv_title.setText(movieName);
-            String summary = trailersEntity.getSummary();
-            holder.tv_summary.setText(summary);
-            String coverImg = trailersEntity.getCoverImg();
-            ImageUtils.loadImage(mActivity, coverImg, holder.iv_icon, R.drawable.img_default_300x200);
+            bindData(position, itemViewType, holder);
 
             return convertView;
         }
 
+        private void bindData(int position, int itemViewType, ViewHolder holder) {
+            switch (itemViewType) {
+                case 0 :
+
+                    break;
+                case 1 :
+
+                    break;
+                case 2 :
+
+                    break;
+            }
+            DiscoverNewsEntity.NewsListEntity newsListEntity = getItem(position);
+            String title = newsListEntity.getTitle();
+            holder.tv_title.setText(title);
+            String summary = newsListEntity.getSummary();
+            holder.tv_summary.setText(summary);
+            String coverImg = newsListEntity.getImage();
+            ImageUtils.loadImage(mActivity, coverImg, holder.iv_iamge1, R.drawable.img_default_90x90);
+
+        }
+
+        private View initTypeView(View convertView, int itemViewType, ViewHolder holder) {
+            switch (itemViewType) {
+                case 0 :
+                    initTypeView(convertView, holder);
+                    holder.iv_paly = (ImageView) convertView.findViewById(R.id.iv_item_news_play);
+                    break;
+                case 1 :
+
+                    break;
+                case 2 :
+
+                    break;
+            }
+            return convertView;
+        }
+
+        private void initTypeView(View convertView, ViewHolder holder) {
+            convertView = View.inflate(mActivity, R.layout.item_news, null);
+            holder.iv_iamge1 = (ImageView) convertView.findViewById(R.id.iv_item_prevue_icon);
+            holder.tv_title = (TextView) convertView.findViewById(R.id.tv_item_prevue_title);
+            holder.tv_summary = (TextView) convertView.findViewById(R.id.tv_item_prevue_summary);
+        }
+
         private class ViewHolder{
-            ImageView iv_icon;
+            ImageView iv_paly;
             TextView tv_title;
             TextView tv_summary;
+            TextView tv_time;
+            TextView tv_reviewNum;
+
+            ImageView iv_iamge1;
+            ImageView iv_iamge2;
+            ImageView iv_iamge3;
         }
     }
 

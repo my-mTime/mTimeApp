@@ -13,12 +13,12 @@ import android.widget.TextView;
 
 import com.atguigu.mtimeapp.R;
 import com.atguigu.mtimeapp.daiwei.DiscoverBasepage;
+import com.atguigu.mtimeapp.daiwei.domain.DiscoverFilmCommentEntity;
 import com.atguigu.mtimeapp.daiwei.domain.DiscoverHeaderEntity;
-import com.atguigu.mtimeapp.daiwei.domain.DiscoverNewsEntity;
-import com.atguigu.mtimeapp.daiwei.domain.DiscoverPrevueEntity;
 import com.atguigu.mtimeapp.utils.ContantsUtils;
 import com.example.benhuo_library.lib.utils.image.image.ImageUtils;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
@@ -46,7 +46,7 @@ public class FilmComment extends DiscoverBasepage {
     private ImageView iv_header_filmComment_icon;
     private LinearLayout ll_header_news_ticketList;
     private RadioGroup rg_header_leaderboard_topList;
-    private List<DiscoverNewsEntity.NewsListEntity> newsList;
+    private List<DiscoverFilmCommentEntity> filmComment;
 
     public FilmComment(Activity activity) {
         super(activity);
@@ -83,7 +83,7 @@ public class FilmComment extends DiscoverBasepage {
      * 获取列表数据
      */
     private void getDataFromNet() {
-        OkHttpUtils.get().url(ContantsUtils.discover_prevue).build().execute(new StringCallback() {
+        OkHttpUtils.get().url(ContantsUtils.discover_filmComment).build().execute(new StringCallback() {
             @Override
             public void onError(Request request, Exception e) {
                 Log.i("TAG", "onError===" + e);
@@ -97,17 +97,16 @@ public class FilmComment extends DiscoverBasepage {
     }
 
     private void processData(String json) {
-        DiscoverNewsEntity newsEntity = parseJson(json);
-        newsList = newsEntity.getNewsList();
+        filmComment = parseJson(json);
 
-        if(newsList != null&& !newsList.isEmpty()) {
-            lv_discover.setAdapter(new TopListAdapter());
+        if(filmComment != null&& !filmComment.isEmpty()) {
+            lv_discover.setAdapter(new FilmCommentAdapter());
         }
 
     }
 
-    private DiscoverNewsEntity parseJson(String json) {
-        return new Gson().fromJson(json, DiscoverNewsEntity.class);
+    private List<DiscoverFilmCommentEntity> parseJson(String json) {
+        return new Gson().fromJson(json, new TypeToken<List<DiscoverFilmCommentEntity>>(){}.getType());
     }
 
     /**
@@ -141,21 +140,21 @@ public class FilmComment extends DiscoverBasepage {
             DiscoverHeaderEntity.ReviewEntity review = headerEntity.getReview();
 
             tv_disconver_header_title.setText(review.getTitle());
-            ImageUtils.loadImage(mActivity, review.getImageUrl(), iv_header_bg);
+            ImageUtils.loadImage(mActivity, review.getImageUrl(), iv_header_bg, R.drawable.img_default_300x200);
 
             tv_disconver_header_name.setText(review.getMovieName());
-            ImageUtils.loadImage(mActivity, review.getImageUrl(), iv_header_filmComment_icon);
+            ImageUtils.loadImage(mActivity, review.getPosterUrl(), iv_header_filmComment_icon, R.drawable.img_default);
         }
     }
-    public class TopListAdapter extends BaseAdapter {
+    public class FilmCommentAdapter extends BaseAdapter {
         @Override
         public int getCount() {
-            return newsList.size();
+            return filmComment.size();
         }
 
         @Override
         public Object getItem(int position) {
-            return newsList.get(position);
+            return filmComment.get(position);
         }
 
         @Override
@@ -168,31 +167,50 @@ public class FilmComment extends DiscoverBasepage {
             ViewHolder holder;
             if (convertView == null) {
                 holder = new ViewHolder();
-                convertView = View.inflate(mActivity, R.layout.item_prevue, null);
-                holder.iv_icon = (ImageView) convertView.findViewById(R.id.iv_item_prevue_icon);
+                convertView = View.inflate(mActivity, R.layout.item_filmcomment, null);
+                holder.iv_userIcon = (ImageView) convertView.findViewById(R.id.iv_item_comment_userIcon);
+                holder.iv_poster = (ImageView) convertView.findViewById(R.id.iv_item_comment_poster);
                 holder.tv_title = (TextView) convertView.findViewById(R.id.tv_item_prevue_title);
                 holder.tv_summary = (TextView) convertView.findViewById(R.id.tv_item_prevue_summary);
+                holder.tv_userName = (TextView) convertView.findViewById(R.id.tv_item_comment_userName);
+                holder.tv_movieName = (TextView) convertView.findViewById(R.id.tv_item_comment_movieName);
+                holder.tv_grade = (TextView) convertView.findViewById(R.id.tv_item_comment_grade);
 
                 convertView.setTag(holder);
             } else {
                 holder = (ViewHolder) convertView.getTag();
             }
 
-            DiscoverPrevueEntity.TrailersEntity trailersEntity = (DiscoverPrevueEntity.TrailersEntity) getItem(position);
-            String movieName = trailersEntity.getMovieName();
-            holder.tv_title.setText(movieName);
-            String summary = trailersEntity.getSummary();
+            DiscoverFilmCommentEntity FilmCommentEntity = filmComment.get(position);
+            DiscoverFilmCommentEntity.RelatedObjEntity relatedObj = FilmCommentEntity.getRelatedObj();
+            String movieName = relatedObj.getTitle();
+            holder.tv_movieName.setText(movieName);
+            String coverImg = relatedObj.getImage();
+            ImageUtils.loadImage(mActivity, coverImg, holder.iv_poster, R.drawable.img_default);
+
+            String title = FilmCommentEntity.getTitle();
+            holder.tv_title.setText(title);
+            String userName = FilmCommentEntity.getNickname();
+            holder.tv_userName.setText(userName);
+            String summary = FilmCommentEntity.getSummary();
             holder.tv_summary.setText(summary);
-            String coverImg = trailersEntity.getCoverImg();
-            ImageUtils.loadImage(mActivity, coverImg, holder.iv_icon, R.drawable.img_default_300x200);
+            String rating = FilmCommentEntity.getRating();
+            holder.tv_grade.setText(rating);
+            String userIcon = FilmCommentEntity.getUserImage();
+            ImageUtils.loadImage(mActivity, userIcon, holder.iv_userIcon, R.drawable.img_default_45x45);
 
             return convertView;
         }
 
         private class ViewHolder{
-            ImageView iv_icon;
+            ImageView iv_userIcon;
+            ImageView iv_poster;
             TextView tv_title;
             TextView tv_summary;
+            TextView tv_userName;
+            TextView tv_movieName;
+            TextView tv_grade;
+
         }
     }
 
