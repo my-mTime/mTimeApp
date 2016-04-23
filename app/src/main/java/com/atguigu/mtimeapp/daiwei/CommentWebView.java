@@ -39,7 +39,6 @@ public class CommentWebView extends Activity {
         initView();
         initData();
 
-//        wv_webView.loadDataWithBaseURL();
     }
 
     private void initData() {
@@ -77,6 +76,8 @@ public class CommentWebView extends Activity {
             case 1 :
                 ReviewDetailEntity reviewDetailEntity = parseJson(json);
 
+                reviewDetailEntity.getContent();
+//                wv_webView.loadDataWithBaseURL();
                 break;
         }
     }

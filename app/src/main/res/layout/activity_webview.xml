@@ -64,7 +64,7 @@
                     <TextView
                         android:id="@+id/tv_comment_detail_movieName"
                         android:layout_width="wrap_content"
-                        android:textColor="##595959"
+                        android:textColor="#595959"
                         android:text="评《超胆侠》"
                         android:layout_height="wrap_content" />
                     <TextView
