@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/moviedetail_title" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scr_play_movie_detials"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_content_container_detials"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="255dp"
+                    android:background="@drawable/img_default"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="33dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/icon_paly_movie_detials"
+                                android:layout_width="120dp"
+                                android:layout_height="155dp"
+                                android:background="@drawable/head_star" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_movietype_play_movie_detials"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:orientation="vertical"
+                                android:padding="1dp"></LinearLayout>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_ll_movie_name_detials_buyticket"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lines="1"
+                                android:text="星球大战:原觉醒"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tv_ll_movie_us_detials_buyticket"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Starts Wars:The"
+                                android:textColor="#f80"
+                                android:textSize="10sp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_score_detials_buyticket"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="15dp"
+                                    android:text="7.7"
+                                    android:textColor="#000" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/tv_timemovie_detials_buyticket"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="1dp"
+                                android:text="135分钟" />
+
+                            <TextView
+                                android:id="@+id/tv_typemovie_detials_buyticket"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="1dp"
+                                android:text="动作/冒险/奇幻" />
+
+                            <TextView
+                                android:id="@+id/tv_showTime_detials_buyticket"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2016年1月2日上映" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="9dp"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/btn_wantsee_detials_buyticket"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/goshopping_btn"
+                                    android:text="我想看" />
+
+                                <Button
+                                    android:id="@+id/btn_wantscore_detials_buyticket"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/title_bar_movie_cinema_switch_view_background"
+                                    android:text="我要评分"
+                                    android:textColor="#0f0" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_commonSpecial_play_movie_detial_buyticket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="“有一种情怀叫星战"
+                        android:textColor="#f80"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/btn_scroll_buyticket_detials"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/bt_big_orange"
+                        android:text="查票讯/购票"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <!--分割灰块-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@color/color_rb_selected" />
+
+                <FrameLayout
+                    android:id="@+id/expandable_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/above"
+                    android:layout_margin="15dp">
+
+                    <TextView
+                        android:id="@+id/expandable_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:ellipsize="end"
+                        android:text="↓↓↓↓↓↓↓剧情↓↓↓↓↓↓↓:没有数据666666666
+                        66666666666666666666666666666666666
+                        66666666666666666666666666666666666666
+                        666666666666666666666666666666666666666666
+                        6666666666666666666666666666666666666666666
+                        66666666666666666666666666666666666666666666
+                        66666666666666666666666666666666666666666666
+                        66666666666666666666666666" />
+                </FrameLayout>
+                <!--分割灰块-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@color/color_rb_selected" />
+                <!--时光热度排行-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="99"
+                            android:textColor="#ff0000"
+                            android:textSize="50sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="时光热度排名" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="#adadad" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="99"
+                            android:textColor="#3a3a3a"
+                            android:textSize="45sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="累计票房(亿)" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="#adadad" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="99"
+                            android:textColor="#3a3a3a"
+                            android:textSize="45sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="周票房(亿)" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--分割灰块-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@color/color_rb_selected" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:text="视频剧照"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <!--视频剧照-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:text="n个视频"
+                                android:textColor="#000000" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.9"
+                                android:src="@drawable/img_default" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#adadad" />
+                        <!--图片剧照-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.1"
+                                android:text="n个视频"
+                                android:textColor="#000000" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.9"
+                                android:src="@drawable/img_default" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--分割灰块-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@color/color_rb_selected" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N位演职人员"
+                            android:textSize="25sp" />
+                    </RelativeLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="230dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/ll_moviedetail_scrollview"
+                            android:layout_width="match_parent"
+                            android:layout_height="230dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="50dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="导演"
+                                    android:textSize="25dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_moviedetaildaoyan_img"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/img_default" />
+
+                                <TextView
+                                    android:id="@+id/tv_moviedetaildaoyan_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="导演名字" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <!--分割灰块-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@color/color_rb_selected" />
+                <!--相关新闻-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N条相关新闻" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_moviedetail_news_title1"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="title1"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/tv_moviedetail_news_title2"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_weight="1"
+                                android:text="title2"
+                                android:textColor="#3a3aff"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_moviedetail_news_img"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:src="@drawable/img_default" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--分割灰块-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@color/color_rb_selected" />
+                <!--网友评论-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="n条网友评论"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp">
+                <LinearLayout
+                    android:id="@+id/ll_moviedetail_usersay"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:orientation="vertical">
+                </LinearLayout>
+                </ScrollView>
+                <!--分割灰块-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@color/color_rb_selected" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#dbdbdb">
+
+            <Button
+                android:id="@+id/btn_buyticket_play_movie_item"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bt_big_orange"
+                android:text="查票讯/购票"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

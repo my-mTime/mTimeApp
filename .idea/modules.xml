@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/selectMovieSeatmaster/selectMovieSeatmaster.iml" filepath="$PROJECT_DIR$/selectMovieSeatmaster/selectMovieSeatmaster.iml" />
       <module fileurl="file://$PROJECT_DIR$/snappingstepper/snappingstepper.iml" filepath="$PROJECT_DIR$/snappingstepper/snappingstepper.iml" />
       <module fileurl="file://$PROJECT_DIR$/snappingstepper_app/snappingstepper_app.iml" filepath="$PROJECT_DIR$/snappingstepper_app/snappingstepper_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vitamio/vitamio.iml" filepath="$PROJECT_DIR$/vitamio/vitamio.iml" />
     </modules>
   </component>
 </project>

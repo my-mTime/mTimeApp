@@ -11,11 +11,17 @@ import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 
 /**
  * Created by daiwei on 2016/4/21.
+ *
+ * glide下载的图片转圆形
  */
 public class GlideCircleTransform extends BitmapTransformation {
-
     public GlideCircleTransform(Context context) {
         super(context);
+    }
+
+    @Override
+    protected Bitmap transform(BitmapPool pool, Bitmap toTransform, int outWidth, int outHeight) {
+        return circleCrop(pool, toTransform);
     }
 
     private static Bitmap circleCrop(BitmapPool pool, Bitmap source) {
@@ -46,13 +52,4 @@ public class GlideCircleTransform extends BitmapTransformation {
     public String getId() {
         return getClass().getName();
     }
-
-    @Override
-    protected android.graphics.Bitmap transform(BitmapPool pool, Bitmap toTransform, int outWidth, int outHeight) {
-        return circleCrop(pool, toTransform);
-    }
 }
-
-//private RequestManager glideRequest;
-//glideRequest = Glide.with(this);
-//        glideRequest.load("https://www.baidu.com/img/bdlogo.png").transform(new GlideCircleTransform(context)).into(imageView);

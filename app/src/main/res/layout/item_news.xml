@@ -1,88 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:padding="10dp">
 
-    <RelativeLayout
-        android:id="@+id/rl_item_news_image"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageButton
-            android:id="@+id/iv_item_news_image"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:background="@drawable/img_default_90x90" />
-
-        <ImageView
-            android:id="@+id/iv_item_news_play"
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:background="@drawable/img_play" />
-    </RelativeLayout>
+            android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_toRightOf="@+id/rl_item_news_image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
-        android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/iv_item_news_image"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/img_default_90x90" />
 
-        <TextView
-            android:id="@+id/tv_item_news_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="2"
-            android:text="央视揭《捉妖记》造假黑幕"
-            android:textColor="#dd000000"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/tv_item_news_summary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:text="凌晨上座率108% 24亿票房到底注了多少水"
-            android:textColor="#66000000"
-            android:textSize="15sp" />
+            <ImageView
+                android:id="@+id/iv_item_news_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/img_play" />
+        </RelativeLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_item_news_time"
+                android:id="@+id/tv_item_news_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5小时前"
-                android:textColor="#66000000"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="央视揭《捉妖记》造假黑幕"
+                android:textColor="#dd000000"
                 android:textSize="18sp" />
-
 
             <TextView
-                android:id="@+id/tv_item_news_reviewNum"
+                android:id="@+id/tv_item_news_title2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="评论 19"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="凌晨上座率108% 24亿票房到底注了多少水"
                 android:textColor="#66000000"
-                android:textSize="18sp" />
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_item_news_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5小时前"
+                    android:textColor="#66000000"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_item_news_reviewNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="评论 19"
+                    android:textColor="#66000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="0.1dp"
-        android:layout_below="@+id/rl_item_news_image"
+        android:layout_height=".01dp"
         android:layout_marginTop="10dp"
         android:background="#33000000" />
-</RelativeLayout>
+</LinearLayout>

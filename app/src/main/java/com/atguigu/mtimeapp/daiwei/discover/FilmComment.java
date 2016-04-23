@@ -1,9 +1,11 @@
 package com.atguigu.mtimeapp.daiwei.discover;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -12,10 +14,15 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.atguigu.mtimeapp.R;
+import com.atguigu.mtimeapp.daiwei.CommentWebView;
 import com.atguigu.mtimeapp.daiwei.DiscoverBasepage;
+import com.atguigu.mtimeapp.daiwei.GlideCircleTransform;
 import com.atguigu.mtimeapp.daiwei.domain.DiscoverFilmCommentEntity;
 import com.atguigu.mtimeapp.daiwei.domain.DiscoverHeaderEntity;
 import com.atguigu.mtimeapp.utils.ContantsUtils;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.RequestManager;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.benhuo_library.lib.utils.image.image.ImageUtils;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -46,6 +53,9 @@ public class FilmComment extends DiscoverBasepage {
     private ImageView iv_header_filmComment_icon;
     private LinearLayout ll_header_news_ticketList;
     private RadioGroup rg_header_leaderboard_topList;
+    /**
+     * 列表数据
+     */
     private List<DiscoverFilmCommentEntity> filmComment;
 
     public FilmComment(Activity activity) {
@@ -101,6 +111,20 @@ public class FilmComment extends DiscoverBasepage {
 
         if(filmComment != null&& !filmComment.isEmpty()) {
             lv_discover.setAdapter(new FilmCommentAdapter());
+            lv_discover.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Intent intent = new Intent(mActivity, CommentWebView.class);
+                    int reviewId;
+                    if(position != 0) {
+                        reviewId = filmComment.get(position - 1).getId();
+                    }else {
+                        reviewId = headerEntity.getReview().getReviewID();
+                    }
+                    intent.putExtra("reviewId", reviewId);
+                    mActivity.startActivity(intent);
+                }
+            });
         }
 
     }
@@ -195,9 +219,21 @@ public class FilmComment extends DiscoverBasepage {
             String summary = FilmCommentEntity.getSummary();
             holder.tv_summary.setText(summary);
             String rating = FilmCommentEntity.getRating();
-            holder.tv_grade.setText(rating);
+            if(Double.parseDouble(rating) != 0.0) {
+                holder.tv_grade.setText(rating);
+            }else {
+                holder.tv_grade.setText("");
+            }
+
             String userIcon = FilmCommentEntity.getUserImage();
-            ImageUtils.loadImage(mActivity, userIcon, holder.iv_userIcon, R.drawable.img_default_45x45);
+            RequestManager glideRequest = Glide.with(mActivity);
+            glideRequest.load(userIcon)
+                    .placeholder(R.drawable.img_default_45x45) //设置默认图片
+                    .centerCrop()
+                    .crossFade() //淡入淡出效果
+                    .diskCacheStrategy(DiskCacheStrategy.ALL) //全尺寸缓存
+                    .transform(new GlideCircleTransform(mActivity)) //圆形图片
+                    .into(holder.iv_userIcon);
 
             return convertView;
         }

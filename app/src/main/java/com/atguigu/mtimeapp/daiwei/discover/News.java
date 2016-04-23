@@ -16,6 +16,7 @@ import com.atguigu.mtimeapp.daiwei.DiscoverBasepage;
 import com.atguigu.mtimeapp.daiwei.domain.DiscoverHeaderEntity;
 import com.atguigu.mtimeapp.daiwei.domain.DiscoverNewsEntity;
 import com.atguigu.mtimeapp.utils.ContantsUtils;
+import com.atguigu.mtimeapp.utils.DateUtils;
 import com.example.benhuo_library.lib.utils.image.image.ImageUtils;
 import com.google.gson.Gson;
 import com.zhy.http.okhttp.OkHttpUtils;
@@ -27,7 +28,7 @@ import okhttp3.Request;
 
 /**
  * Created by daiwei on 2016/4/13.
- *
+ * <p/>
  * 发现--新闻页面
  */
 public class News extends DiscoverBasepage {
@@ -49,7 +50,8 @@ public class News extends DiscoverBasepage {
     private ImageView ib_header_prevue_play;
     private ImageView iv_header_filmComment_icon;
     private LinearLayout ll_header_news_ticketList;
-    private RadioGroup rg_header_leaderboard_topList;;
+    private RadioGroup rg_header_leaderboard_topList;
+    ;
 
     public News(Activity activity) {
         super(activity);
@@ -112,7 +114,7 @@ public class News extends DiscoverBasepage {
         iv_header_filmComment_icon.setVisibility(View.GONE);
         tv_disconver_header_name.setVisibility(View.GONE);
 
-        if(headerEntity !=null) {
+        if (headerEntity != null) {
             DiscoverHeaderEntity.NewsEntity news = headerEntity.getNews();
 
             tv_disconver_header_title.setText(news.getTitle());
@@ -139,13 +141,14 @@ public class News extends DiscoverBasepage {
 
     /**
      * 处理列表数据
+     *
      * @param response
      */
     private void processData(String response) {
         DiscoverNewsEntity newsEntity = parseJson(response);
         newsListEntities = newsEntity.getNewsList();
 
-        if(newsListEntities !=null && !newsListEntities.isEmpty()) {
+        if (newsListEntities != null && !newsListEntities.isEmpty()) {
             lv_discover.setAdapter(new NewsAdapter());
         }
     }
@@ -166,13 +169,13 @@ public class News extends DiscoverBasepage {
             int itemViewType = -1;
             int type = newsListEntities.get(position).getType();
             switch (type) {
-                case  0:
+                case 0:
                     itemViewType = 0;
                     break;
-                case  1:
+                case 1:
                     itemViewType = 1;
                     break;
-                case  2:
+                case 2:
                     itemViewType = 2;
                     break;
             }
@@ -201,7 +204,7 @@ public class News extends DiscoverBasepage {
             if (convertView == null) {
                 holder = new ViewHolder();
                 convertView = initTypeView(convertView, itemViewType, holder);
-
+                initCommonView(convertView, holder);
                 convertView.setTag(holder);
             } else {
                 holder = (ViewHolder) convertView.getTag();
@@ -213,54 +216,76 @@ public class News extends DiscoverBasepage {
         }
 
         private void bindData(int position, int itemViewType, ViewHolder holder) {
-            switch (itemViewType) {
-                case 0 :
-
-                    break;
-                case 1 :
-
-                    break;
-                case 2 :
-
-                    break;
-            }
             DiscoverNewsEntity.NewsListEntity newsListEntity = getItem(position);
+
             String title = newsListEntity.getTitle();
             holder.tv_title.setText(title);
-            String summary = newsListEntity.getSummary();
-            holder.tv_summary.setText(summary);
-            String coverImg = newsListEntity.getImage();
-            ImageUtils.loadImage(mActivity, coverImg, holder.iv_iamge1, R.drawable.img_default_90x90);
+            int reviewNum = newsListEntity.getCommentCount();
+            holder.tv_reviewNum.setText("评论 " + reviewNum);
+            int time = newsListEntity.getPublishTime();
+            String hhTime = DateUtils.formatDate(time, "HH");
+            holder.tv_time.setText(hhTime+"小时前");
+
+
+            switch (itemViewType) {
+                case 0:
+                case 2:
+                    String title2 = newsListEntity.getTitle2();
+                    holder.tv_title2.setText(title2);
+                    break;
+                case 1:
+                    List<DiscoverNewsEntity.NewsListEntity.ImagesEntity> images = newsListEntity.getImages();
+                    DiscoverNewsEntity.NewsListEntity.ImagesEntity imagesEntity = images.get(0);
+                    String urlImg = imagesEntity.getUrlImg1();
+                    ImageUtils.loadImage(mActivity, urlImg, holder.iv_iamge1, R.drawable.img_default_90x90);
+
+                    imagesEntity = images.get(1);
+                    urlImg = imagesEntity.getUrlImg1();
+                    ImageUtils.loadImage(mActivity, urlImg, holder.iv_iamge2, R.drawable.img_default_90x90);
+
+                    imagesEntity = images.get(2);
+                    urlImg = imagesEntity.getUrlImg1();
+                    ImageUtils.loadImage(mActivity, urlImg, holder.iv_iamge3, R.drawable.img_default_90x90);
+                    break;
+            }
 
         }
 
         private View initTypeView(View convertView, int itemViewType, ViewHolder holder) {
             switch (itemViewType) {
-                case 0 :
-                    initTypeView(convertView, holder);
+                case 0:
+                    convertView = View.inflate(mActivity, R.layout.item_news, null);
                     holder.iv_paly = (ImageView) convertView.findViewById(R.id.iv_item_news_play);
+                    holder.tv_title2 = (TextView) convertView.findViewById(R.id.tv_item_news_title2);
+                    holder.iv_paly.setVisibility(View.GONE);
                     break;
-                case 1 :
-
+                case 2:
+                    convertView = View.inflate(mActivity, R.layout.item_news, null);
+                    holder.iv_paly = (ImageView) convertView.findViewById(R.id.iv_item_news_play);
+                    holder.tv_title2 = (TextView) convertView.findViewById(R.id.tv_item_news_title2);
+                    holder.iv_paly.setVisibility(View.VISIBLE);
                     break;
-                case 2 :
-
+                case 1:
+                    convertView = View.inflate(mActivity, R.layout.item_news2, null);
+                    holder.iv_iamge2 = (ImageView) convertView.findViewById(R.id.iv_item_news2_img2);
+                    holder.iv_iamge3 = (ImageView) convertView.findViewById(R.id.iv_item_news2_img3);
                     break;
             }
             return convertView;
         }
 
-        private void initTypeView(View convertView, ViewHolder holder) {
-            convertView = View.inflate(mActivity, R.layout.item_news, null);
-            holder.iv_iamge1 = (ImageView) convertView.findViewById(R.id.iv_item_prevue_icon);
-            holder.tv_title = (TextView) convertView.findViewById(R.id.tv_item_prevue_title);
-            holder.tv_summary = (TextView) convertView.findViewById(R.id.tv_item_prevue_summary);
+        private void initCommonView(View convertView, ViewHolder holder) {
+            holder.iv_iamge1 = (ImageView) convertView.findViewById(R.id.iv_item_news_image);
+            holder.tv_title = (TextView) convertView.findViewById(R.id.tv_item_news_title);
+            holder.tv_time = (TextView) convertView.findViewById(R.id.tv_item_news_time);
+            holder.tv_reviewNum = (TextView) convertView.findViewById(R.id.tv_item_news_reviewNum);
+
         }
 
-        private class ViewHolder{
+        private class ViewHolder {
             ImageView iv_paly;
             TextView tv_title;
-            TextView tv_summary;
+            TextView tv_title2;
             TextView tv_time;
             TextView tv_reviewNum;
 

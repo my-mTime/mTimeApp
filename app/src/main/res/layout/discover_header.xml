@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="#33000000"
+            android:background="#55000000"
             android:padding="10dp">
 
             <TextView
@@ -30,8 +30,8 @@
                 android:singleLine="true"
                 android:text="神战：权力之眼"
                 android:textColor="#ffffff"
-                android:textSize="18sp"
-                android:visibility="gone" />
+                android:textSize="15sp"
+                 />
 
             <TextView
                 android:id="@+id/tv_disconver_header_title"

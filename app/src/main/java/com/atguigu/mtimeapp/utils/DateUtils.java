@@ -88,6 +88,39 @@ public class DateUtils {
     public final static int DATE_ORDER_DESC = 1;
 
     /**
+     *
+     * @param millisecond
+     * @return
+     */
+    public static String cal(int millisecond){
+        int h = 0;
+        int d = 0;
+        int s = 0;
+        int second = millisecond / 1000;
+        int temp = second%3600;
+        if(second>3600){
+            h= second/3600;
+            if(temp!=0){
+                if(temp>60){
+                    d = temp/60;
+                    if(temp%60!=0){
+                        s = temp%60;
+                    }
+                }else{
+                    s = temp;
+                }
+            }
+        }else{
+            d = second/60;
+            if(second%60!=0){
+                s = second%60;
+            }
+        }
+
+        return h+"时"+d+"分"+s+"秒";
+    }
+
+    /**
      * 根据指定格式，获取现在时间
      */
     public static String getNowDateFormat(String format) {

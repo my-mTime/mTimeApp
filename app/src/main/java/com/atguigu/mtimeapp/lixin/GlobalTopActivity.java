@@ -76,7 +76,7 @@ public class GlobalTopActivity extends Activity {
         tablayout_indicator = (TabLayout)findViewById(R.id.tablayout_indicator);
         iv_title_back = (ImageView)findViewById(R.id.iv_title_back);
         tv_title_name = (TextView)findViewById(R.id.tv_title_name);
-        iv_title_show = (ImageView)findViewById(R.id.iv_title_show);
+        iv_title_show = (ImageView)findViewById(R.id.iv_title_share);
         tv_globaltop_title = (TextView)findViewById(R.id.tv_globaltop_title);
     }
 }

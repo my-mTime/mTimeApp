@@ -1,1 +1,1 @@
-include ':app', ':okhttputils', ':pulltorefresh_library', ':benhuo_library', ':citylist_demo', ':SMSSDK', ':snappingstepper', ':etablistview_library', ':snappingstepper_app', ':selectMovieSeatmaster'
+include ':app', ':okhttputils', ':pulltorefresh_library', ':benhuo_library', ':citylist_demo', ':SMSSDK', ':snappingstepper', ':etablistview_library', ':snappingstepper_app', ':selectMovieSeatmaster', ':vitamio'

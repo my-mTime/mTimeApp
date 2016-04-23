@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:ellipsize="end"
-                android:lines="2"
+                android:maxLines="2"
                 android:text="文/杀手里昂从拍摄时间上来说，《箭士柳白猿》应该是徐皓峰的第二部作品，在《倭寇的踪迹》"
                 android:textColor="#66000000"
                 android:textSize="15sp" />
@@ -55,9 +55,10 @@
 
                 <TextView
                     android:id="@+id/tv_item_comment_userName"
-                    android:layout_width="70dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
+                    android:maxWidth="90dp"
                     android:ellipsize="end"
                     android:singleLine="true"
                     android:text="杀手里昂Leon"
@@ -74,9 +75,10 @@
 
                 <TextView
                     android:id="@+id/tv_item_comment_movieName"
-                    android:layout_width="80dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
+                    android:maxWidth="80dp"
                     android:singleLine="true"
                     android:text="箭士柳白猿"
                     android:textColor="#dd000000"
@@ -93,7 +95,7 @@
                     android:id="@+id/tv_item_comment_grade"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#55ff11"
+                    android:background="#669D0E"
                     android:text="9.1"
                     android:textSize="18sp" />
 

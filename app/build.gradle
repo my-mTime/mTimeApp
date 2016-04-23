@@ -27,4 +27,5 @@ dependencies {
     compile project(':SMSSDK')
     compile files('libs/baidumapapi_v2_1_2.jar')
     compile 'com.android.support:design:23.1.1'
+    compile project(':vitamio')
 }

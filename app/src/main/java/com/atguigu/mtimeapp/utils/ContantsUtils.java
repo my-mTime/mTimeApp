@@ -32,14 +32,24 @@ public class ContantsUtils {
      * 发现 -- 预告片
      */
     public static final String discover_prevue = "http://api.m.mtime.cn/PageSubArea/TrailerList.api";
+
     /**
      * 发现 -- 排行榜
      */
     public static final String discover_leaderboard = "http://api.m.mtime.cn/TopList/TopListOfAll.api?pageIndex=1";
+
+    /**
+     * 影评详情
+     *
+     * http://api.m.mtime.cn/Review/Detail.api?reviewId=7956592
+     */
+    public static final String film_comment = "http://api.m.mtime.cn/Review/Detail.api?";
+
     /**
      * 发现 -- 影评
      */
     public static final String discover_filmComment = "http://api.m.mtime.cn/MobileMovie/Review.api?needTop=false";
+
     /**
      * 发现 -- 排行榜（每个排行榜的数据）
      */
