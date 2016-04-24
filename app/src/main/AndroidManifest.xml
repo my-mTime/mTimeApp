@@ -56,6 +56,7 @@
             -->
         </service>
 
+        <activity android:name=".daiwei.CommentWebView"/>
         <activity android:name=".daiwei.SearchActivity" />
         <activity android:name=".lixin.MTimeHotActivity" />
         <activity android:name=".lixin.GlobalTopActivity" />
