@@ -58,7 +58,12 @@
             </intent-filter>
             -->
         </service>
+<<<<<<< HEAD
         <activity android:name=".activity.CaptureActivity" />
+=======
+
+        <activity android:name=".daiwei.CommentWebView"/>
+>>>>>>> be6ad0913f0d1b2cd67d7ce87d2539ceafa0ac6f
         <activity android:name=".daiwei.SearchActivity" />
         <activity android:name=".lixin.MTimeHotActivity" />
         <activity android:name=".lixin.GlobalTopActivity" />

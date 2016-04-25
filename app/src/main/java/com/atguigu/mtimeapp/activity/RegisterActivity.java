@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,7 +26,7 @@ import cn.smssdk.SMSSDK;
 public class RegisterActivity extends Activity{
 
     private String number;
-
+    private ImageView iv_logo;
     private EditText phoneNum;//电话号码
     private EditText password;//密码
     private EditText captcha;//验证码
@@ -43,6 +44,8 @@ public class RegisterActivity extends Activity{
         gender = (RadioGroup) findViewById(R.id.reg_gender);
         agree = (CheckBox) findViewById(R.id.reg_agree);
         clause = (TextView) findViewById(R.id.tv_reg_clause);
+        iv_logo = (ImageView)findViewById(R.id.iv_logo);
+        iv_logo.setVisibility(View.VISIBLE);
         SMSSDK.registerEventHandler(eh);
     }
 

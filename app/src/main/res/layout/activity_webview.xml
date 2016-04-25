@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/title_bar"/>
+    <include layout="@layout/title_bar" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -12,15 +12,16 @@
         android:layout_weight="1">
 
         <LinearLayout
-            android:padding="15dp"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_height="match_parent">
+            android:padding="15dp">
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -30,9 +31,9 @@
                     android:id="@+id/tv_comment_detail_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="《超胆侠》第二季：“反英雄的挑衅"
                     android:ellipsize="end"
                     android:maxLines="2"
+                    android:text="《超胆侠》第二季：“反英雄的挑衅"
                     android:textColor="#000000"
                     android:textSize="23dp" />
             </LinearLayout>
@@ -41,69 +42,74 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <android.support.v4.widget.CircleImageView
-                    android:layout_marginTop="15dp"
+
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/civ_comment_detail_userIcon"
                     android:layout_width="50dp"
-                    android:layout_height="50dp" />
-                    <TextView
-                        android:layout_marginTop="20dp"
-                        android:layout_toRightOf="@+id/civ_comment_detail_userIcon"
-                        android:id="@+id/tv_comment_detail_userName"
-                        android:layout_width="wrap_content"
-                        android:textColor="#000000"
-                        android:text="未知者"
-                        android:layout_height="wrap_content" />
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp" />
+
+                <TextView
+                    android:id="@+id/tv_comment_detail_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/civ_comment_detail_userIcon"
+                    android:text="未知者"
+                    android:textColor="#000000" />
 
                 <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignLeft="@+id/tv_comment_detail_userName"
                     android:layout_below="@+id/tv_comment_detail_userName"
-                    android:layout_width="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/tv_comment_detail_movieName"
                         android:layout_width="wrap_content"
-                        android:textColor="#595959"
+                        android:layout_height="wrap_content"
                         android:text="评《超胆侠》"
-                        android:layout_height="wrap_content" />
+                        android:textColor="#595959" />
+
                     <TextView
                         android:id="@+id/tv_comment_detail_grade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#669D0E"
                         android:layout_marginLeft="10dp"
+                        android:background="#669D0E"
                         android:text="9.1"
                         android:textSize="18sp" />
                 </LinearLayout>
 
                 <TextView
-                    android:layout_below="@id/civ_comment_detail_userIcon"
                     android:id="@+id/view_comment_detail_diveder"
                     android:layout_width="match_parent"
                     android:layout_height="0.1dp"
+                    android:layout_below="@id/civ_comment_detail_userIcon"
                     android:layout_marginTop="15dp"
                     android:background="#33000000" />
 
                 <TextView
-                    android:layout_below="@+id/view_comment_detail_diveder"
+                    android:id="@+id/tv_comment_detail_time"
                     android:layout_width="wrap_content"
-                    android:text="2016-3-28 8:43"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_comment_detail_diveder"
                     android:layout_marginTop="15dp"
-                    android:layout_height="wrap_content" />
+                    android:text="2016-3-28 8:43" />
 
                 <ImageView
+                    android:id="@+id/iv_comment_detail_poster"
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:background="@drawable/img_default"
-                    android:layout_height="wrap_content" />
+                    android:background="@drawable/img_default" />
             </RelativeLayout>
 
             <WebView
                 android:id="@+id/wv_webView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-               ></WebView>
+                android:layout_height="match_parent"></WebView>
         </LinearLayout>
 
     </ScrollView>
