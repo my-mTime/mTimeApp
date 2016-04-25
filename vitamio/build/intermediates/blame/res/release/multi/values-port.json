@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\AndroidStudioProjects\\MobilePlayer3\\vitamio\\build\\intermediates\\res\\merged\\release\\values-port\\values-port.xml",
+        "outputFile": "C:\\Users\\Administrator\\Desktop\\ssss\\mTimeApp\\vitamio\\build\\intermediates\\res\\merged\\release\\values-port\\values-port.xml",
         "map": [
             {
                 "to": {
@@ -11,31 +11,7 @@
                     "endOffset": 106
                 },
                 "from": {
-                    "file": "C:\\AndroidStudioProjects\\MobilePlayer3\\vitamio\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-port\\values-port.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 291,
-                        "endColumn": 55,
-                        "endOffset": 342
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "D:\\AndroidStudio\\Workspace\\MtimeApp\\vitamio\\build\\intermediates\\res\\merged\\release\\values-port\\values-port.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 55,
-                    "endOffset": 106
-                },
-                "from": {
-                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\vitamio\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-port\\values-port.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\ssss\\mTimeApp\\vitamio\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-port\\values-port.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

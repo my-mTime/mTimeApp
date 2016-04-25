@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.atguigu.mtimeapp.R;
+import com.atguigu.mtimeapp.activity.CaptureActivity;
 import com.atguigu.mtimeapp.adapter.HomePagerAdapter;
 import com.atguigu.mtimeapp.base.BasePager;
 import com.atguigu.mtimeapp.domain.HomeBean;
@@ -44,6 +45,8 @@ import okhttp3.Request;
  * Created by FlagWu on 2016/4/8.
  */
 public class HomePager extends BasePager {
+
+    private static final int REQUEST_CODE_SCAN = 0x0000;
 
     private PullToRefreshListView lvHomehead;
 
@@ -112,6 +115,7 @@ public class HomePager extends BasePager {
     private LinearLayout loading_failed;
 
     private View headView;
+    private ImageButton iv_hosearch_scan;
     /**
      * 推荐的电影的数据
      */
@@ -144,6 +148,15 @@ public class HomePager extends BasePager {
     @Override
     public View initView() {
         headView = View.inflate(mActivity, R.layout.home_head_view, null);
+        iv_hosearch_scan = (ImageButton) headView.findViewById(R.id.iv_hosearch_scan);
+        iv_hosearch_scan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mActivity, CaptureActivity.class);
+                mActivity.startActivityForResult(intent, REQUEST_CODE_SCAN);
+            }
+        });
+
         View view = View.inflate(mActivity, R.layout.home_pager_list, null);
 
         loading = (LinearLayout) view.findViewById(R.id.loading);

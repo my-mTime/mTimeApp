@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:background="@android:color/transparent"
+        android:id="@+id/rl_title_play_movie_detials"
+        android:padding="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- 七个字符-->
+        <TextView
+            android:id="@+id/tv__namepaly_movie_details_buyticket"
+            android:text="星球大战"
+            android:textSize="21sp"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/ib_back_movie_details_buyticket"
+            android:padding="5dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/btn_gray_pre"/>
+
+        <ImageButton
+            android:layout_marginRight="10dp"
+            android:id="@+id/share_paly_movie_details_buyticket"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/preferential_share"/>
+        <ImageButton
+            android:id="@+id/favorite_paly_movie_details_buyticket"
+            android:layout_toLeftOf="@id/share_paly_movie_details_buyticket"
+            android:layout_marginRight="15dp"
+            android:padding="5dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/icon_my_home_favorites_45x45"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scr_play_movie_detials"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+            <LinearLayout
+                android:id="@+id/ll_content_container_detials"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:background="@drawable/img_default"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="255dp">
+                    <LinearLayout
+                        android:layout_marginTop="33dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/icon_paly_movie_detials"
+                                android:background="@drawable/lead_bg2"
+                                android:layout_width="120dp"
+                                android:layout_height="155dp" />
+                            <LinearLayout
+                                android:id="@+id/ll_movietype_play_movie_detials"
+                                android:padding="1dp"
+                                android:layout_alignParentRight="true"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_marginLeft="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_ll_movie_name_detials_buyticket"
+                                android:textSize="18sp"
+                                android:text="星球大战:原觉醒"
+                                android:lines="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/tv_ll_movie_us_detials_buyticket"
+                                android:textSize="10sp"
+                                android:text="Starts Wars:The"
+                                android:textColor="#f80"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+                                <TextView
+                                    android:id="@+id/tv_score_detials_buyticket"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_alignParentRight="true"
+                                    android:textColor="#000"
+                                    android:text="7.7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </RelativeLayout>
+                            <TextView
+                                android:id="@+id/tv_timemovie_detials_buyticket"
+                                android:padding="1dp"
+                                android:text="135分钟"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/tv_typemovie_detials_buyticket"
+                                android:padding="1dp"
+                                android:text="动作/冒险/奇幻"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/tv_showTime_detials_buyticket"
+                                android:text="2016年1月2日上映"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <LinearLayout
+                                android:layout_marginTop="9dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <Button
+                                    android:id="@+id/btn_wantsee_detials_buyticket"
+                                    android:layout_marginRight="5dp"
+                                    android:text="我想看"
+                                    android:background="@drawable/goshopping_btn"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp" />
+                                <Button
+                                    android:id="@+id/btn_wantscore_detials_buyticket"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="我要评分"
+                                    android:textColor="#0f0"
+                                    android:background="@drawable/title_bar_movie_cinema_switch_view_background"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_commonSpecial_play_movie_detial_buyticket"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="“有一种情怀叫星战"
+                        android:textColor="#f80"
+                        android:textSize="18sp"/>
+                    <Button
+                        android:id="@+id/btn_scroll_buyticket_detials"
+                        android:layout_alignParentBottom="true"
+                        android:text="查票讯/购票"
+                        android:textSize="20sp"
+                        android:textColor="#fff"
+                        android:background="@drawable/bt_big_orange"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <FrameLayout
+            android:background="#dbdbdb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/btn_buyticket_play_movie_item"
+                android:text="查票讯/购票"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:background="@drawable/bt_big_orange"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"/>
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>
+

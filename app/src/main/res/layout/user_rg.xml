@@ -16,19 +16,19 @@
     <Button
         android:id="@+id/btn_ticket"
         android:drawableTop="@drawable/act_my_home_tickets"
-        android:text="购物车"
+        android:text="电影票订单"
         style="@style/UserBtnTheme"
         />
     <Button
         android:id="@+id/btn_goods"
         android:drawableTop="@drawable/act_my_home_goods"
-        android:text="购物车"
+        android:text="商品订单"
         style="@style/UserBtnTheme"
         />
     <Button
         android:id="@+id/btn_card"
         android:drawableTop="@drawable/act_my_home_card"
-        android:text="购物车"
+        android:text="礼品卡"
         style="@style/UserBtnTheme"
         />
 </RadioGroup>

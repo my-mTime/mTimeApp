@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\AndroidStudio\\Workspace\\MtimeApp\\vitamio\\build\\intermediates\\res\\merged\\release\\values-xlarge-land-v4\\values-xlarge-land-v4.xml",
+        "outputFile": "C:\\Users\\Administrator\\Desktop\\ssss\\mTimeApp\\vitamio\\build\\intermediates\\res\\merged\\release\\values-xlarge-land-v4\\values-xlarge-land-v4.xml",
         "map": [
             {
                 "to": {
@@ -11,31 +11,7 @@
                     "endOffset": 114
                 },
                 "from": {
-                    "file": "D:\\AndroidStudio\\Workspace\\MtimeApp\\vitamio\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-xlarge-land\\values-xlarge-land.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 299,
-                        "endColumn": 63,
-                        "endOffset": 358
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "C:\\AndroidStudioProjects\\MobilePlayer3\\vitamio\\build\\intermediates\\res\\merged\\release\\values-xlarge-land-v4\\values-xlarge-land-v4.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 63,
-                    "endOffset": 114
-                },
-                "from": {
-                    "file": "C:\\AndroidStudioProjects\\MobilePlayer3\\vitamio\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-xlarge-land\\values-xlarge-land.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\ssss\\mTimeApp\\vitamio\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-xlarge-land\\values-xlarge-land.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

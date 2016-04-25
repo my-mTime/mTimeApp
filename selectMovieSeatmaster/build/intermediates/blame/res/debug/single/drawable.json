@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\ssss\\mTimeApp\\selectMovieSeatmaster\\build\\intermediates\\res\\merged\\debug\\drawable\\seat_selected.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\ssss\\mTimeApp\\selectMovieSeatmaster\\src\\main\\res\\drawable\\seat_selected.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\ssss\\mTimeApp\\selectMovieSeatmaster\\build\\intermediates\\res\\merged\\debug\\drawable\\seat_sold.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\ssss\\mTimeApp\\selectMovieSeatmaster\\src\\main\\res\\drawable\\seat_sold.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\ssss\\mTimeApp\\selectMovieSeatmaster\\build\\intermediates\\res\\merged\\debug\\drawable\\seat_sale.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\ssss\\mTimeApp\\selectMovieSeatmaster\\src\\main\\res\\drawable\\seat_sale.png"
+    }
+]

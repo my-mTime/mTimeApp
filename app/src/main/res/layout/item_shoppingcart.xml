@@ -31,13 +31,14 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp">
 
-                    <ImageView
+                    <CheckBox
                         android:id="@+id/iv_shoppingcart_checked"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
-                        android:background="@drawable/shopping_cart_checked" />
+                        android:button="@null"
+                        android:background="@drawable/shopping_cart_checked"/>
 
                     <TextView
                         android:id="@+id/tv_shoppingcart_name"
@@ -70,14 +71,13 @@
                             android:layout_height="30dp"
                             stepper:max="99"
                             stepper:min="0"
-                            stepper:mode="custom"
-                            stepper:step="1"
                             stepper:stepper_buttonBackground="#ffffff"
+                            stepper:step="1"
                             stepper:stepper_contentBackground="@drawable/shoppingcart_bg"
                             stepper:stepper_leftButtonBackground="@drawable/shoppingcart_bg"
                             stepper:stepper_rightButtonBackground="@drawable/shoppingcart_bg"
                             stepper:text="0"
-                            stepper:value="0">
+                            stepper:value="1">
 
                         </com.bigkoo.snappingstepper.SnappingStepper>
                     </LinearLayout>
@@ -94,14 +94,14 @@
                             android:id="@+id/tv_shoppingcart_currprice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="￥149.00" />
-
+                            android:text="149.00" />
                         <TextView
                             android:id="@+id/tv_shoppingcart_oriprice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="￥209.00" />
+                            android:text="￥209.00"
+                            android:textColor="@android:color/darker_gray"/>
 
                         <TextView
                             android:id="@+id/tv_shoppingcart_count"
@@ -113,6 +113,5 @@
                 </RelativeLayout>
             </LinearLayout>
         </RelativeLayout>
-
     </LinearLayout>
 </RelativeLayout>
