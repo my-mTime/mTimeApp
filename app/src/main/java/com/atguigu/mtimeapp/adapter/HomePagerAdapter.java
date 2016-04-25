@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.atguigu.mtimeapp.R;
 import com.atguigu.mtimeapp.domain.HomeTimeBean;
+import com.atguigu.mtimeapp.utils.DateUtils;
 import com.example.benhuo_library.lib.utils.image.image.ImageUtils;
 
 import java.util.List;
@@ -18,6 +19,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by 笨货 on 2016/4/10.
+ * 时光精选的列表
  */
 public class HomePagerAdapter extends MyBaseAdapter {
 
@@ -49,7 +51,8 @@ public class HomePagerAdapter extends MyBaseAdapter {
             case "头条":
                 typeTag = 4;
                 break;
-            default:
+            default://欧美新片/日韩/经典回顾
+                typeTag = 5;
                 Log.e("TAG", "typeTag=" + typeTag);
                 break;
         }
@@ -58,7 +61,7 @@ public class HomePagerAdapter extends MyBaseAdapter {
 
     @Override
     public int getViewTypeCount() {
-        return 5;
+        return 6;
     }
 
     @Override
@@ -104,6 +107,7 @@ public class HomePagerAdapter extends MyBaseAdapter {
                     holder.ivHopointdePic = (ImageView) convertView.findViewById(R.id.iv_hopointde_pic);
                     holder.tv_hopointde_time = (TextView) convertView.findViewById(R.id.tv_hopointde_time);
                     holder.tv_hopointde_comment = (TextView) convertView.findViewById(R.id.tv_hopointde_comment);
+                    holder.iv_hopointde_pic_play= (ImageView) convertView.findViewById(R.id.iv_hopointde_pic_play);
                     convertView.setTag(holder);
                     break;
                 case "猜电影":
@@ -136,6 +140,16 @@ public class HomePagerAdapter extends MyBaseAdapter {
                     holder.tv_hopointheadli_comment = (TextView) convertView.findViewById(R.id.tv_hopointheadli_comment);
                     convertView.setTag(holder);
                     break;
+                default:
+                    convertView = View.inflate(mActivity, R.layout.home_hotpoint_forn_item, null);
+                    holder.tvHopointfornTag = (TextView) convertView.findViewById(R.id.tv_hopointforn_tag);
+                    holder.tvHopointfornName = (TextView) convertView.findViewById(R.id.tv_hopointforn_name);
+                    holder.tvHopointfornTitle = (TextView) convertView.findViewById(R.id.tv_hopointforn_title);
+                    holder.tvHopointfornDesc = (TextView) convertView.findViewById(R.id.tv_hopointforn_desc);
+                    holder.ivHopointfornPic = (ImageView) convertView.findViewById(R.id.iv_hopointforn_pic);
+                    holder.tv_hopointforn_score= (TextView) convertView.findViewById(R.id.tv_hopointforn_score);
+                    convertView.setTag(holder);
+                    break;
             }
 
         } else {
@@ -152,15 +166,20 @@ public class HomePagerAdapter extends MyBaseAdapter {
                 ImageUtils.loadImage(mActivity, dataEntity.getImg1(), holder.ivHopointphPic0, R.drawable.img_default_90x90);
                 ImageUtils.loadImage(mActivity, dataEntity.getImg2(), holder.ivHopointphPic1, R.drawable.img_default_45x45);
                 ImageUtils.loadImage(mActivity, dataEntity.getImg3(), holder.ivHopointphPic2, R.drawable.img_default_45x45);
-                holder.tv_hopointph_time.setText(dataEntity.getPublishTime() + "");
+                holder.tv_hopointph_time.setText(DateUtils.getTimeDisplay(mActivity, dataEntity.getPublishTime() + ""));
                 holder.tv_hopointph_comment.setText("评论 " + dataEntity.getCommentCount());
                 break;
             case "简讯":
+                if(dataEntity.getDataType()==2) {
+                    holder.iv_hopointde_pic_play.setVisibility(View.VISIBLE);
+                }else{
+                    holder.iv_hopointde_pic_play.setVisibility(View.GONE);
+                }
                 holder.tvHopointdeTag.setText(dataEntity.getTag());
                 holder.tvHopointdeName.setText(dataEntity.getTitle());
                 holder.tvHopointdeTitle.setText(dataEntity.getContent());
                 ImageUtils.loadImage(mActivity, dataEntity.getImg1(), holder.ivHopointdePic, R.drawable.img_default_300x200);
-                holder.tv_hopointde_time.setText(dataEntity.getPublishTime() + "");
+                holder.tv_hopointde_time.setText(DateUtils.getTimeDisplay(mActivity, dataEntity.getPublishTime() + ""));
                 holder.tv_hopointde_comment.setText("评论 " + dataEntity.getCommentCount());
                 break;
             case "猜电影":
@@ -183,8 +202,21 @@ public class HomePagerAdapter extends MyBaseAdapter {
                 holder.tvHopointheadliName.setText(dataEntity.getTitle());
                 holder.tvHopointheadliTitle.setText(dataEntity.getContent());
                 ImageUtils.loadImage(mActivity, dataEntity.getImg1(), holder.iv_hopointheadli_pic, R.drawable.img_default_300x200);
-                holder.tv_hopointheadli_time.setText(dataEntity.getPublishTime() + "");
+                holder.tv_hopointheadli_time.setText(DateUtils.getTimeDisplay(mActivity, dataEntity.getPublishTime() + ""));
                 holder.tv_hopointheadli_comment.setText("评论 " + dataEntity.getCommentCount());
+                break;
+            default:
+                holder.tvHopointfornTag.setText(dataEntity.getTag());
+                holder.tvHopointfornName.setText(dataEntity.getTitleCn());
+                holder.tvHopointfornTitle.setText(dataEntity.getTitleEn());
+                holder.tvHopointfornDesc.setText(dataEntity.getContent());
+                ImageUtils.loadImage(mActivity,dataEntity.getImage(),holder.ivHopointfornPic,R.drawable.img_default);
+                if(dataEntity.getRating().equals(0.0)) {
+                    holder.tv_hopointforn_score.setVisibility(View.GONE);
+                }else{
+                    holder.tv_hopointforn_score.setVisibility(View.VISIBLE);
+                    holder.tv_hopointforn_score.setText(dataEntity.getRating());
+                }
                 break;
         }
 
@@ -215,6 +247,7 @@ public class HomePagerAdapter extends MyBaseAdapter {
         private ImageView ivHopointdePic;
         private TextView tv_hopointde_time;
         private TextView tv_hopointde_comment;
+        private ImageView iv_hopointde_pic_play;
 
         //影评
         private TextView tvHopointfilmreTag;
@@ -249,6 +282,14 @@ public class HomePagerAdapter extends MyBaseAdapter {
         private ImageView ivHopointphPic2;
         private TextView tv_hopointph_time;
         private TextView tv_hopointph_comment;
+
+        //欧美新片/日韩/经典
+        private TextView tvHopointfornTag;
+        private TextView tvHopointfornName;
+        private TextView tvHopointfornTitle;
+        private TextView tvHopointfornDesc;
+        private ImageView ivHopointfornPic;
+        private TextView tv_hopointforn_score;
 
     }
 }

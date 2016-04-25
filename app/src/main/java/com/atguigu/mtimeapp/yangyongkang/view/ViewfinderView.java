@@ -57,8 +57,8 @@ public final class ViewfinderView extends View {
 	private final int maskColor; // 取景框外的背景颜色
 	private final int resultColor;// result Bitmap的颜色
 	private final int laserColor; // 红色扫描线的颜色
-	private final int resultPointColor; // 特征点的颜色
-	private final int statusColor; // 提示文字颜色
+	private final int resultPointColor; // 特的颜色
+	private final int statusColor; // 提征点示文字颜色
 	private int scannerAlpha;
 	private List<ResultPoint> possibleResultPoints;
 	private List<ResultPoint> lastPossibleResultPoints;

@@ -17,7 +17,7 @@ import java.util.List;
  * Created by 笨货 on 2016/4/11.
  * 商城列表的Adapter
  */
-public class StoreAdapter extends MyBaseAdapter{
+public class StoreAdapter extends MyBaseAdapter {
 
     private List<StoreBean.CategoryEntity> category;
     private Activity mActivity;
@@ -48,7 +48,7 @@ public class StoreAdapter extends MyBaseAdapter{
         ViewHolder holder=null;
         if(convertView==null) {
             holder=new ViewHolder();
-            convertView=View.inflate(mActivity,R.layout.store_list_item,null);
+            convertView=View.inflate(mActivity, R.layout.store_list_item,null);
             holder.ivColor = (ImageView)convertView.findViewById(R.id.iv_color);
             holder.tvCatagoryName = (TextView)convertView.findViewById(R.id.tv_catagory_name);
             holder.tvCatagoryMore = (TextView)convertView.findViewById(R.id.tv_catagory_more);
@@ -73,13 +73,13 @@ public class StoreAdapter extends MyBaseAdapter{
         holder.tvCatagoryName.setText(categoryEntity.getName());
         ImageUtils.loadImage(mActivity, categoryEntity.getImage(), holder.ivCatagoryTop, R.drawable.img_default_300x200);
 
-        ImageUtils.loadImage(mActivity,categoryEntity.getSubList().get(0).getImage(),holder.ivCatagorySublist0);
+        ImageUtils.loadImage(mActivity, categoryEntity.getSubList().get(0).getImage(), holder.ivCatagorySublist0);
         holder.tvCatagorySublist0Title.setText(categoryEntity.getSubList().get(0).getTitle());
 
-        ImageUtils.loadImage(mActivity,categoryEntity.getSubList().get(1).getImage(),holder.ivCatagorySublist1);
+        ImageUtils.loadImage(mActivity, categoryEntity.getSubList().get(1).getImage(), holder.ivCatagorySublist1);
         holder.tvCatagorySublist1Title.setText(categoryEntity.getSubList().get(1).getTitle());
 
-        ImageUtils.loadImage(mActivity,categoryEntity.getSubList().get(2).getImage(),holder.ivCatagorySublist2);
+        ImageUtils.loadImage(mActivity, categoryEntity.getSubList().get(2).getImage(), holder.ivCatagorySublist2);
         holder.tvCatagorySublist2Title.setText(categoryEntity.getSubList().get(2).getTitle());
 
         return convertView;

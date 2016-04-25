@@ -120,6 +120,15 @@ public class HomeTimeBean {
         private RelatedObjEntity relatedObj;
         private String summaryInfo;
         private String userImage;
+        /**
+         * titleCn : 《麦格雷的陷阱》2015
+         * titleEn : 暂时忘记他的憨豆属性
+         * image : http://img31.mtime.cn/mt/2016/04/08/111605.73244306_1280X720X2.jpg
+         */
+
+        private String titleCn;
+        private String titleEn;
+        private String image;
 
         @Override
         public String toString() {
@@ -352,6 +361,30 @@ public class HomeTimeBean {
             return userImage;
         }
 
+        public void setTitleCn(String titleCn) {
+            this.titleCn = titleCn;
+        }
+
+        public void setTitleEn(String titleEn) {
+            this.titleEn = titleEn;
+        }
+
+        public void setImage(String image) {
+            this.image = image;
+        }
+
+        public String getTitleCn() {
+            return titleCn;
+        }
+
+        public String getTitleEn() {
+            return titleEn;
+        }
+
+        public String getImage() {
+            return image;
+        }
+
         public static class ImagesEntity {
             private String desc;
             private int gId;
@@ -514,7 +547,7 @@ public class HomeTimeBean {
             private int id;
             private String image;
             private String name;
-            private double rating;
+            private String rating;
             private String releaseLocation;
             private String runtime;
             private String title;
@@ -536,7 +569,7 @@ public class HomeTimeBean {
                 this.name = name;
             }
 
-            public void setRating(double rating) {
+            public void setRating(String rating) {
                 this.rating = rating;
             }
 
@@ -584,7 +617,7 @@ public class HomeTimeBean {
                 return name;
             }
 
-            public double getRating() {
+            public String getRating() {
                 return rating;
             }
 
